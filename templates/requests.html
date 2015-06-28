@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block scripts %}
+    {{ block.super }}
+    <script type="text/javascript" src="{% static 'js/requests.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+    <div id="full">
+        <div id="content">
+            <title id="title">{{ new_requests.count }} : requests</title>
+            <h2><a href="{% url 'index' %}">Home</a></h2>
+            <hr>
+            {% for req in request_list %}
+                <div id="list">
+                    "{{ req.request_method }}
+                    {{ req.path }}
+                    {{ req.server_protocol }}"
+                    {{ req.status_code }}
+                    {{ req.content_len }}
+                    <hr>
+                    </font>
+                    <br>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+
+
+
+
+
+
