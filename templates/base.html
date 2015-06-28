@@ -1,22 +1,35 @@
-{% load staticfiles %}
 <!DOCTYPE html>
-<html lang="en">
-    <head>
+{% load staticfiles %}
+<html>
+  <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
         <meta charset="utf-8">
-        <title>{% block title %}{% endblock title %}Site Name</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  </head>
+  <body>
+    <h1>
+      42 Coffee Cups Test Assignment
+    </h1>
 
-        <meta http-equiv="X-UA-Compatible" content="chrome=IE7" />
+    {%block content%}
+    {%endblock%}
 
-        <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
-        <meta name="apple-mobile-web-app-capable" content="yes"/>
-        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    {% block scripts %}
+      <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    {% endblock %}
 
-        <link rel="stylesheet" href="{% static 'css/screen.css' %}" media="screen, projection"/>
+  </body>
 
-        {% block extra_head %}{% endblock extra_head %}
-
-    </head>
-    <body id="{% block body_id %}{% endblock %}" class="{% block body_class %}{% endblock %}">
-        {% block content %}{% endblock content %}
-    </body>
+  <style type="text/css">
+    body{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+  </style>
+  <hr>
 </html>

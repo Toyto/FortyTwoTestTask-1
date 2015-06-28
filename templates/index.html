@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+    <div class="col-sm-6 pull-left">
+        <h3>Name: {{about_me.name}}</h3>
+        <h3>Last name: {{about_me.surname}}</h3>
+        <h3>Date of birth: {{about_me.birth_date}}</h3>
+        <h3>Bio: {{about_me.bio}}</h3>
+    </div>
+
+    <div class="col-sm-6 pull-right">
+        <h3>Email: {{ about_me.email }}</h3>
+        <h3>Jabber ID: {{ about_me.jabber }}</h3>
+        <h3>Skype: {{ about_me.skype }}</h3>
+        <h3>Other contacts: {{about_me.contacts}}</h3>
+    </div>
+
+{% endblock %}
+

@@ -1,0 +1,35 @@
+[
+  {
+    "model": "hello.About_me",
+    "pk": 1,
+    "fields": {
+      "name": "Andrew",
+      "surname": "Komar",
+      "bio": "I am a student. I am fond of programming.",
+      "contacts": "380935989148",
+      "birth_date": "1997-06-02",
+      "email": "wertuk2@gmail.com",
+      "jabber": "andrewkom@chrome.pl",
+      "skype": "andrikwow33",
+      "photo": null
+    }
+  },
+  {
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "is_staff": true,
+    "groups": [],
+    "user_permissions": [],
+    "first_name": "",
+    "is_active": true,
+    "last_name": "",
+    "username": "admin",
+    "email": "admin@admin.com",
+    "password": "pbkdf2_sha256$12000$5a6V4KSHCnkK$yZ5g6FsAFeaBLPaecpGB4e9b6cPfx6s8Rxzq0lwCK3c=",
+    "date_joined": "2015-04-05T17:36:10.093Z",
+    "last_login": "2015-04-05T17:36:10.093Z",
+    "is_superuser": true
+  }
+}
+]
