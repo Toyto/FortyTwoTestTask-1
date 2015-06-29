@@ -1,5 +1,8 @@
 from .models import About_me, AllRequests
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, FormView, View
+from django.http import HttpResponseBadRequest, HttpResponse
+from .util import JsonResponse
+from .forms import AuthorForm
 import logging
 logger = logging.getLogger(__name__)
 
@@ -23,3 +26,17 @@ class RequestView(TemplateView):
         context['request_list'] = AllRequests.objects.all()[:10]
         context['new_requests'] = AllRequests.objects.all()
         return context
+
+
+class CreateAuthView(FormView):
+    template_name = 'register.html'
+    form_class = AuthorForm
+
+    def post(self, request, *args, **kwargs):
+        contacts = About_me.objects.last()
+        form = AuthorForm(data=request.POST, instance=contacts)
+        if form.is_valid():
+            form.save()
+            return HttpResponse('OK')
+        else:
+            return HttpResponseBadRequest()

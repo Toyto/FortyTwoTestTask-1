@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block scripts %}
+    {{ block.super }}
+    <script type="text/javascript" src="{% static 'js/forms.js' %}"></script>
+    <script src="http://malsup.github.com/jquery.form.js"></script>
+    <script type="text/javascript">
+        window._URLS = {
+            register : "{% url 'register' %}"
+        }
+    </script>
+{% endblock %}
+
+{% block content %}
+<div>
+    <form name="register" method="POST" id="register_form">
+        {% csrf_token %}
+        <div class="container" style="margin-left: 10%;">
+            <div class="row vertical-align">
+                <div class="col-xs-6 col-md-2">
+                    <label>Name:</label>
+                    {{ form.name }}
+                    <label>Last name:</label>
+                    {{ form.surname }}
+                    <label>Date of birth:</label>
+                    {{ form.birth_date }}
+                    <label>Photo:</label>
+                    {{ form.photo }}
+                    <img src="{{ MEDIA.URL }}{{ form.photo.value }}" height='200' width='200'>
+                </div>
+                <div class="col-xs-6 col-md-2" style="margin-left: 30%;">
+                    <label>Email:</label>
+                    {{ form.email }}
+                    <label>Jabber:</label>
+                    {{ form.jabber}}
+                    <label>Skype:</label>
+                    {{ form.skype }}
+                    <label>Other contacts:</label>
+                    {{ form.contacts }}
+                    <label>Bio:</label>
+                    {{ form.bio }}
+                </div>
+            </div>
+            <div class="btns">
+                <button type="submit" id="btn-save">Save</button>
+                <a href="{% url 'index' %}"><button type="button">Cancel</button></a>
+            </div>
+            <span style="display: none;" id="loading">Loading....</span>
+            <span style="display: none;" id="form_complete">Success</span>
+        </div>
+    </form>
+</div>
+{% endblock %}
