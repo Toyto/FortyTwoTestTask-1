@@ -11,5 +11,5 @@ class IndexView(TemplateView):
         context = super(IndexView, self).get_context_data(**kwargs)
         context['about_me'] = About_me.objects.get(pk=1)
         logger.info(self.request)
-        logger.info(context)
+        logger.debug(context)
         return context
