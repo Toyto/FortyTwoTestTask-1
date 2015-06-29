@@ -10,11 +10,16 @@
             register : "{% url 'register' %}"
         }
     </script>
+    <script>
+        $(function() {
+            $( "#id_birth_date" ).datepicker({ dateFormat: 'yy-mm-dd' });
+        });
+  </script>
 {% endblock %}
 
 {% block content %}
 <div>
-    <form name="register" method="POST" id="register_form">
+    <form name="register" method="POST" enctype="multipart/form-data" id="register_form">
         {% csrf_token %}
         <div class="container" style="margin-left: 10%;">
             <div class="row vertical-align">
@@ -27,7 +32,7 @@
                     {{ form.birth_date }}
                     <label>Photo:</label>
                     {{ form.photo }}
-                    <img src="{{ MEDIA.URL }}{{ form.photo.value }}" height='200' width='200'>
+                    <img class="picture" src="{{ MEDIA.URL }}{{ form.photo.value }}">
                 </div>
                 <div class="col-xs-6 col-md-2" style="margin-left: 30%;">
                     <label>Email:</label>

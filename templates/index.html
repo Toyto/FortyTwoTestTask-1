@@ -8,7 +8,16 @@
         <h3>Last name: {{ about_me.surname }}</h3>
         <h3>Date of birth: {{ about_me.birth_date }}</h3>
         <h3>Bio: {{ about_me.bio }}</h3>
-        <h3>Photo: {{ about_me.photo }}</h3>
+        <h3>Photo:</h3>
+        {% if about_me.photo %}
+            <img class="picture" src="{{ about_me.photo.url }}" style="
+                display: block;
+                max-width:200px;
+                max-height:200px;
+                width: auto;
+                height: auto;
+            ">
+        {% endif %}
     </div>
     <div class="col-sm-6 pull-right">
         <h3>Email: {{ about_me.email }}</h3>

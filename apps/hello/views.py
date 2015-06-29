@@ -14,7 +14,7 @@ class IndexView(TemplateView):
         context = super(IndexView, self).get_context_data(**kwargs)
         context['about_me'] = About_me.objects.get(pk=1)
         logger.info(self.request)
-        logger.info(context)
+        logger.debug(context)
         return context
 
 
@@ -34,7 +34,7 @@ class CreateAuthView(FormView):
 
     def post(self, request, *args, **kwargs):
         contacts = About_me.objects.last()
-        form = AuthorForm(data=request.POST, instance=contacts)
+        form = AuthorForm(request.POST, request.FILES, instance=contacts)
         if form.is_valid():
             form.save()
             return HttpResponse('OK')

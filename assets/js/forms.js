@@ -27,4 +27,17 @@ $(document).ready(function() {
     }
 
     $('#register_form').ajaxForm(callback);
+
+    function readURL() {
+        var input = this;
+        if (input.files && input.files[0]) {
+            var preview = new FileReader();
+            preview.onload = function (event) {
+                $(".picture").attr('src', event.target.result);
+            }
+            preview.readAsDataURL(input.files[0]);}}
+
+    $(function () {
+        $("#id_photo").change(readURL)
+    });
 });
