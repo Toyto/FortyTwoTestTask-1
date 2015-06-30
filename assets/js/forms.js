@@ -23,6 +23,15 @@ $(document).ready(function() {
             setTimeout(function() {
                 $("#form_complete").hide();
             }, 5000);
+        },
+        error: function() {
+            unblock_form();
+            $("#form_error").show();
+            setTimeout(function() {
+                $("#form_error").hide();
+            }, 5000);
+            $(".btns").show();
+            alert('You make some errors, fix it and try again');
         }
     }
 

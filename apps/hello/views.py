@@ -1,7 +1,6 @@
 from .models import About_me, AllRequests
-from django.views.generic import TemplateView, FormView, View
+from django.views.generic import TemplateView, FormView
 from django.http import HttpResponseBadRequest, HttpResponse
-from .util import JsonResponse
 from .forms import AuthorForm
 import logging
 logger = logging.getLogger(__name__)

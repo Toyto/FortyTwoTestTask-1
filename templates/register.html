@@ -32,7 +32,13 @@
                     {{ form.birth_date }}
                     <label>Photo:</label>
                     {{ form.photo }}
-                    <img class="picture" src="{{ MEDIA.URL }}{{ form.photo.value }}">
+                    <img class="picture" src="{{ MEDIA.URL }}{{ form.photo.value }}" style="
+                                                                                            display: block;
+                                                                                            max-width:200px;
+                                                                                            max-height:200px;
+                                                                                            width: auto;
+                                                                                            height: auto;
+                                                                                        ">
                 </div>
                 <div class="col-xs-6 col-md-2" style="margin-left: 30%;">
                     <label>Email:</label>
@@ -52,6 +58,7 @@
                 <a href="{% url 'index' %}"><button type="button">Cancel</button></a>
             </div>
             <span style="display: none;" id="loading">Loading....</span>
+            <span style="display: none;" id="form_error">ERROR! Fill all fields and try again.</span>
             <span style="display: none;" id="form_complete">Success</span>
         </div>
     </form>
