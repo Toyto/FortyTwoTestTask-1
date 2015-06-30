@@ -30,5 +30,36 @@ class ViewsTest(TestCase):
         response = self.client.get(reverse('index'))
         self.assertContains(response, must_be_first.name)
 
+    def test_index_value_limit(self):
+        """ Test index value limit """
+        About_me.objects.create(name='Goro',
+                                surname='Moro',
+                                birth_date='1995-01-22',
+                                bio='qwe',
+                                email='s_brin@gmail.com',
+                                jabber='123321',
+                                skype='s_brin',
+                                contacts='qwe')
+        contacts = About_me.objects.all()
+        self.assertEqual(contacts.count(), 4)
+        response = self.client.get(reverse('index'))
+        self.assertContains(response, 'Email:', 1)
+        self.assertNotContains(response, 'Goro')
 
-# Create your tests here.
+    def test_data_index(self):
+        """ Test data on index """
+        response = self.client.get(reverse('index'))
+        contacts = About_me.objects.all()
+        self.assertEqual(response.status_code, 200)
+        contact = contacts[0]
+        self.assertContains(response, contact.name, 1)
+        self.assertContains(response, contact.surname, 1)
+        self.assertContains(
+            response,
+            contact.birth_date.strftime('%B %d, %Y').replace('0', ''), 1
+            )
+        self.assertContains(response, contact.bio, 1)
+        self.assertContains(response, contact.email, 1)
+        self.assertContains(response, contact.jabber, 1)
+        self.assertContains(response, contact.skype, 1)
+        self.assertContains(response, contact.contacts, 1)
