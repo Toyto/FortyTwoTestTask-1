@@ -3,5 +3,5 @@ $(document).ready(
                 setInterval(function() {
                     $('#list').empty();
                     $('#full').load(document.URL + ' #full');
-                }, 1000);
+                }, 3000);
             });

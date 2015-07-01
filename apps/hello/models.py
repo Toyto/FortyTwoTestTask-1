@@ -18,3 +18,16 @@ class About_me(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class AllRequests(models.Model):
+    date_time = models.DateTimeField(auto_now=True, auto_now_add=True,
+                                     blank=True)
+    request_method = models.CharField(max_length=10)
+    path = models.CharField(max_length=100)
+    server_protocol = models.CharField(max_length=10)
+    status_code = models.IntegerField(max_length=3)
+    content_len = models.IntegerField(max_length=100)
+
+    class Meta:
+        ordering = ['date_time']

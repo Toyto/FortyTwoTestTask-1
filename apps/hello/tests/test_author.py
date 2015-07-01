@@ -3,7 +3,6 @@ from django.core.urlresolvers import reverse
 from apps.hello.models import About_me
 
 
-# Ticket: 1, 2
 class ViewsTest(TestCase):
     fixtures = ['initial_data.json']
 
@@ -57,7 +56,7 @@ class ViewsTest(TestCase):
         self.assertContains(
             response,
             contact.birth_date.strftime('%B %d, %Y').replace('0', ''), 1
-            )
+        )
         self.assertContains(response, contact.bio, 1)
         self.assertContains(response, contact.email, 1)
         self.assertContains(response, contact.jabber, 1)
