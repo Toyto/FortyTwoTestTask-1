@@ -2,19 +2,29 @@
 {% load staticfiles %}
 
 {% block content %}
+<div>
     <div class="col-sm-6 pull-left">
         <h3>Name: {{data.name}}</h3>
         <h3>Last name: {{data.surname}}</h3>
         <h3>Date of birth: {{data.birth_date}}</h3>
         <h3>Bio: {{data.bio}}</h3>
+        <h3>Photo:</h3>
+        {% if data.photo %}
+            <img class="picture" src="{{ about_me.photo.url }}" style="
+                display: block;
+                max-width:200px;
+                max-height:200px;
+                width: auto;
+                height: auto;
+            ">
+        {% endif %}
     </div>
-
     <div class="col-sm-6 pull-right">
         <h3>Email: {{ data.email }}</h3>
         <h3>Jabber ID: {{ data.jabber }}</h3>
         <h3>Skype: {{ data.skype }}</h3>
         <h3>Other contacts: {{data.contacts}}</h3>
     </div>
-    <a href="{% url 'requests' %}">requests</a>
+</div>
 {% endblock %}
 

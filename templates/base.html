@@ -8,16 +8,21 @@
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
   </head>
   <body>
-    <h1>
-      42 Coffee Cups Test Assignment
-    </h1>
-
+      <h1>
+        42 Coffee Cups Test Assignment
+      </h1>
+      <a href="{% url 'index' %}">Home</a>
+      <a href="{% url 'register' %}" style="margin-left: 80%;">Login</a>
     {%block content%}
     {%endblock%}
+      <div class="col-sm-12 pull-left" style="margin-right: 10%;">
+        <hr style="border-top: 3px solid #000;">
+        <a href="{% url 'requests' %}">requests</a>
+      </div>
 
     {% block scripts %}
       <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+      <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     {% endblock %}
 
