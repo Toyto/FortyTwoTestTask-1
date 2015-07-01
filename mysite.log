@@ -5607,3 +5607,12 @@ TypeError: 'About_me' object is not iterable
 [01/Jul/2015 14:02:57] WARNING             [django.request:143] Not Found: /register/None
 [01/Jul/2015 14:02:57] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
 [01/Jul/2015 14:02:57] DEBUG             [django.db.backends:79] (0.003) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-01 14:02:57.691608', 'GET', '/register/None', 'HTTP/1.1', 404, 2574); args=['2015-07-01 14:02:57.691608', 'GET', '/register/None', 'HTTP/1.1', 404, 2574]
+[01/Jul/2015 14:09:07] DEBUG             [django.db.backends:79] (0.001) QUERY = 'SELECT COUNT(*) FROM "django_admin_log"' - PARAMS = (); args=()
+[01/Jul/2015 14:09:07] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT COUNT(*) FROM "auth_permission"' - PARAMS = (); args=()
+[01/Jul/2015 14:09:07] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT COUNT(*) FROM "auth_group"' - PARAMS = (); args=()
+[01/Jul/2015 14:09:07] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT COUNT(*) FROM "auth_user"' - PARAMS = (); args=()
+[01/Jul/2015 14:09:07] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT COUNT(*) FROM "django_content_type"' - PARAMS = (); args=()
+[01/Jul/2015 14:09:07] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT COUNT(*) FROM "django_session"' - PARAMS = (); args=()
+[01/Jul/2015 14:09:07] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT COUNT(*) FROM "south_migrationhistory"' - PARAMS = (); args=()
+[01/Jul/2015 14:09:07] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT COUNT(*) FROM "hello_about_me"' - PARAMS = (); args=()
+[01/Jul/2015 14:09:07] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT COUNT(*) FROM "hello_allrequests"' - PARAMS = (); args=()
