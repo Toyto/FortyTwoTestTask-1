@@ -3,6 +3,7 @@
 {% load edit_link %}
 {% block content %}
 <div>
+    {% for data in data %}
     <div class="col-sm-6 pull-left">
         <h3>Name: {{data.name}}</h3>
         <h3>Last name: {{data.surname}}</h3>
@@ -27,6 +28,7 @@
         <h3>Skype: {{ data.skype }}</h3>
         <h3>Other contacts: {{data.contacts}}</h3>
     </div>
+    {% endfor %}
 </div>
 {% endblock %}
 

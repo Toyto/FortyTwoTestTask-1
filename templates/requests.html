@@ -10,7 +10,6 @@
     <div id="full">
         <div id="content">
             <title id="title">{{ new_requests.count }} : requests</title>
-            <h2><a href="{% url 'index' %}">Home</a></h2>
             <hr>
             {% for req in request_list %}
                 <div id="list">

@@ -27,3 +27,9 @@ class AllRequests(models.Model):
 
     class Meta:
         ordering = ['date_time']
+
+
+class ChangesLog(models.Model):
+    model = models.CharField(max_length=35)
+    operation = models.CharField(max_length=20)
+    date_time = models.DateTimeField(auto_now=True, auto_now_add=True)
