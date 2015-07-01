@@ -3,7 +3,6 @@ from django.core.urlresolvers import reverse
 from apps.hello.models import About_me
 
 
-# Ticket: 1, 2
 class ViewsTest(TestCase):
     fixtures = ['initial_data.json']
 
@@ -29,6 +28,3 @@ class ViewsTest(TestCase):
         must_be_first = About_me.objects.first()
         response = self.client.get(reverse('index'))
         self.assertContains(response, must_be_first.name)
-
-
-# Create your tests here.
