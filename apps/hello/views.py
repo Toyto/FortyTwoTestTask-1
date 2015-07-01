@@ -11,15 +11,9 @@ class IndexView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)
-<<<<<<< HEAD
         context['data'] = About_me.objects.get(pk=1)
         logger.info(u'Landing page request %s', self.request)
         logger.debug(u'Landing page context %s', context)
-=======
-        context['about_me'] = About_me.objects.get(pk=1)
-        logger.info(self.request)
-        logger.debug(context)
->>>>>>> 2064b286e5d6e0fc9d4be8b0836035a7ef1fecf0
         return context
 
 
