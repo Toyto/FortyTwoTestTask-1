@@ -22,7 +22,9 @@ class RequestView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(RequestView, self).get_context_data(**kwargs)
-        context['request_list'] = AllRequests.objects.exclude(path=reverse('requests'))[:10]
-        context['new_requests'] = AllRequests.objects.all()
+        context['request_list'] = AllRequests.objects.exclude(
+            path=reverse('requests'))[:10]
+        context['new_requests'] = AllRequests.objects.exclude(
+            path=reverse('requests'))
         logger.debug(u'Requests page context %s', context)
         return context

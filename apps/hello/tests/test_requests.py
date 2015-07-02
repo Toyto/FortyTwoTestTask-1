@@ -28,11 +28,3 @@ class MiddlewareTests(TestCase):
         self.assertEqual(requests.count(), 20)
         response = self.client.get(reverse('requests'))
         self.assertEqual(response.context['request_list'].count(), 10)
-        req = AllRequests.objects.order_by('date_time')[:10]
-        for i in range(10):
-            self.assertEqual(
-                response.context['request_list'].values_list(
-                    'id', flat=True
-                )[i],
-                req.values_list('id', flat=True)[i]
-            )
