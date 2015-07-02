@@ -6106,3 +6106,101 @@ bdb.BdbQuit
 [02/Jul/2015 17:59:05] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
 [02/Jul/2015 17:59:05] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-02 17:59:05.252004', 'GET', '/uploads/photos/1936371.png', 'HTTP/1.1', 200, 1575); args=['2015-07-02 17:59:05.252004', 'GET', '/uploads/photos/1936371.png', 'HTTP/1.1', 200, 1575]
 >>>>>>> t3_forms
+[02/Jul/2015 18:04:46] ERROR             [django.request:224] Internal Server Error: /requests/
+Traceback (most recent call last):
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/views/generic/base.py", line 154, in get
+    context = self.get_context_data(**kwargs)
+  File "/home/andrew/MyEnvs/TestTask42/FortyTwoTestTask-1/apps/hello/views.py", line 27, in get_context_data
+    path=reverse('requests'))[:10]
+NameError: name 'reverse' is not defined
+[02/Jul/2015 18:04:46] ERROR             [django.request:224] Internal Server Error: /requests/
+Traceback (most recent call last):
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/views/generic/base.py", line 154, in get
+    context = self.get_context_data(**kwargs)
+  File "/home/andrew/MyEnvs/TestTask42/FortyTwoTestTask-1/apps/hello/views.py", line 27, in get_context_data
+    path=reverse('requests'))[:10]
+NameError: name 'reverse' is not defined
+[02/Jul/2015 18:05:48] ERROR             [django.request:224] Internal Server Error: /requests/
+Traceback (most recent call last):
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/views/generic/base.py", line 154, in get
+    context = self.get_context_data(**kwargs)
+  File "/home/andrew/MyEnvs/TestTask42/FortyTwoTestTask-1/apps/hello/views.py", line 27, in get_context_data
+    path=reverse('requests'))[:10]
+NameError: name 'reverse' is not defined
+[02/Jul/2015 18:05:48] ERROR             [django.request:224] Internal Server Error: /requests/
+Traceback (most recent call last):
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/views/generic/base.py", line 154, in get
+    context = self.get_context_data(**kwargs)
+  File "/home/andrew/MyEnvs/TestTask42/FortyTwoTestTask-1/apps/hello/views.py", line 27, in get_context_data
+    path=reverse('requests'))[:10]
+NameError: name 'reverse' is not defined
+[02/Jul/2015 18:07:27] DEBUG             [django.db.backends:79] (0.002) QUERY = 'SELECT "hello_about_me"."id", "hello_about_me"."name", "hello_about_me"."surname", "hello_about_me"."bio", "hello_about_me"."contacts", "hello_about_me"."birth_date", "hello_about_me"."email", "hello_about_me"."jabber", "hello_about_me"."skype", "hello_about_me"."photo" FROM "hello_about_me" WHERE "hello_about_me"."id" = %s ' - PARAMS = (1,); args=(1,)
+[02/Jul/2015 18:07:27] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[02/Jul/2015 18:07:27] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-02 18:07:27.666242', 'GET', '/', 'HTTP/1.1', 200, 1854); args=['2015-07-02 18:07:27.666242', 'GET', '/', 'HTTP/1.1', 200, 1854]
+[02/Jul/2015 18:07:27] DEBUG             [django.db.backends:79] (0.133) QUERY = 'SELECT "hello_about_me"."id", "hello_about_me"."name", "hello_about_me"."surname", "hello_about_me"."bio", "hello_about_me"."contacts", "hello_about_me"."birth_date", "hello_about_me"."email", "hello_about_me"."jabber", "hello_about_me"."skype", "hello_about_me"."photo" FROM "hello_about_me" WHERE "hello_about_me"."id" = %s ' - PARAMS = (1,); args=(1,)
+[02/Jul/2015 18:07:27] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[02/Jul/2015 18:07:27] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-02 18:07:27.916161', 'GET', '/', 'HTTP/1.1', 200, 1854); args=['2015-07-02 18:07:27.916161', 'GET', '/', 'HTTP/1.1', 200, 1854]
+[02/Jul/2015 18:07:28] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[02/Jul/2015 18:07:28] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-02 18:07:28.258503', 'GET', '/uploads/photos/1936371.png', 'HTTP/1.1', 304, 0); args=['2015-07-02 18:07:28.258503', 'GET', '/uploads/photos/1936371.png', 'HTTP/1.1', 304, 0]
+[02/Jul/2015 18:07:31] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[02/Jul/2015 18:07:31] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-02 18:07:31.954252', 'GET', '/register/', 'HTTP/1.1', 200, 4439); args=['2015-07-02 18:07:31.954252', 'GET', '/register/', 'HTTP/1.1', 200, 4439]
+[02/Jul/2015 18:07:32] WARNING             [django.request:143] Not Found: /register/None
+[02/Jul/2015 18:07:32] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[02/Jul/2015 18:07:32] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-02 18:07:32.251514', 'GET', '/register/None', 'HTTP/1.1', 404, 2574); args=['2015-07-02 18:07:32.251514', 'GET', '/register/None', 'HTTP/1.1', 404, 2574]
+[02/Jul/2015 18:07:41] DEBUG             [django.db.backends:79] (0.004) QUERY = 'SELECT "hello_about_me"."id", "hello_about_me"."name", "hello_about_me"."surname", "hello_about_me"."bio", "hello_about_me"."contacts", "hello_about_me"."birth_date", "hello_about_me"."email", "hello_about_me"."jabber", "hello_about_me"."skype", "hello_about_me"."photo" FROM "hello_about_me" ORDER BY "hello_about_me"."id" DESC LIMIT 1' - PARAMS = (); args=()
+[02/Jul/2015 18:07:41] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[02/Jul/2015 18:07:41] DEBUG             [django.db.backends:79] (0.000) QUERY = 'UPDATE "hello_about_me" SET "name" = %s, "surname" = %s, "bio" = %s, "contacts" = %s, "birth_date" = %s, "email" = %s, "jabber" = %s, "skype" = %s, "photo" = %s WHERE "hello_about_me"."id" = %s ' - PARAMS = ('name', 'surname', 'bio', 'contacts', '2015-07-15', 'wertu22@inbox.ru', 'id', 'skype', 'photos/897156.png', 1); args=('name', 'surname', 'bio', 'contacts', '2015-07-15', 'wertu22@inbox.ru', 'id', 'skype', 'photos/897156.png', 1)
+[02/Jul/2015 18:07:41] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[02/Jul/2015 18:07:41] DEBUG             [django.db.backends:79] (0.000) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-02 18:07:41.775195', 'POST', '/register/', 'HTTP/1.1', 200, 2); args=['2015-07-02 18:07:41.775195', 'POST', '/register/', 'HTTP/1.1', 200, 2]
+[02/Jul/2015 18:07:46] DEBUG             [django.db.backends:79] (0.002) QUERY = 'SELECT "hello_about_me"."id", "hello_about_me"."name", "hello_about_me"."surname", "hello_about_me"."bio", "hello_about_me"."contacts", "hello_about_me"."birth_date", "hello_about_me"."email", "hello_about_me"."jabber", "hello_about_me"."skype", "hello_about_me"."photo" FROM "hello_about_me" WHERE "hello_about_me"."id" = %s ' - PARAMS = (1,); args=(1,)
+[02/Jul/2015 18:07:46] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[02/Jul/2015 18:07:46] DEBUG             [django.db.backends:79] (0.000) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-02 18:07:46.460841', 'GET', '/', 'HTTP/1.1', 200, 1854); args=['2015-07-02 18:07:46.460841', 'GET', '/', 'HTTP/1.1', 200, 1854]
+[02/Jul/2015 18:07:46] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[02/Jul/2015 18:07:46] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-02 18:07:46.711088', 'GET', '/uploads/photos/897156.png', 'HTTP/1.1', 200, 1572); args=['2015-07-02 18:07:46.711088', 'GET', '/uploads/photos/897156.png', 'HTTP/1.1', 200, 1572]
+[02/Jul/2015 18:18:36] DEBUG             [django.db.backends:79] (0.001) QUERY = 'SELECT "hello_about_me"."id", "hello_about_me"."name", "hello_about_me"."surname", "hello_about_me"."bio", "hello_about_me"."contacts", "hello_about_me"."birth_date", "hello_about_me"."email", "hello_about_me"."jabber", "hello_about_me"."skype", "hello_about_me"."photo" FROM "hello_about_me" WHERE "hello_about_me"."id" = %s ' - PARAMS = (1,); args=(1,)
+[02/Jul/2015 18:18:36] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[02/Jul/2015 18:18:36] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-02 18:18:36.896839', 'GET', '/', 'HTTP/1.1', 200, 1854); args=['2015-07-02 18:18:36.896839', 'GET', '/', 'HTTP/1.1', 200, 1854]
+[02/Jul/2015 18:18:37] DEBUG             [django.db.backends:79] (0.001) QUERY = 'SELECT "hello_about_me"."id", "hello_about_me"."name", "hello_about_me"."surname", "hello_about_me"."bio", "hello_about_me"."contacts", "hello_about_me"."birth_date", "hello_about_me"."email", "hello_about_me"."jabber", "hello_about_me"."skype", "hello_about_me"."photo" FROM "hello_about_me" WHERE "hello_about_me"."id" = %s ' - PARAMS = (1,); args=(1,)
+[02/Jul/2015 18:18:37] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[02/Jul/2015 18:18:37] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-02 18:18:37.294268', 'GET', '/', 'HTTP/1.1', 200, 1854); args=['2015-07-02 18:18:37.294268', 'GET', '/', 'HTTP/1.1', 200, 1854]
+[02/Jul/2015 18:18:37] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[02/Jul/2015 18:18:37] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-02 18:18:37.708201', 'GET', '/uploads/photos/897156.png', 'HTTP/1.1', 304, 0); args=['2015-07-02 18:18:37.708201', 'GET', '/uploads/photos/897156.png', 'HTTP/1.1', 304, 0]
+[02/Jul/2015 18:18:39] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[02/Jul/2015 18:18:39] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-02 18:18:39.930985', 'GET', '/register/', 'HTTP/1.1', 200, 4439); args=['2015-07-02 18:18:39.930985', 'GET', '/register/', 'HTTP/1.1', 200, 4439]
+[02/Jul/2015 18:18:40] WARNING             [django.request:143] Not Found: /register/None
+[02/Jul/2015 18:18:40] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[02/Jul/2015 18:18:40] DEBUG             [django.db.backends:79] (0.002) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-02 18:18:40.204210', 'GET', '/register/None', 'HTTP/1.1', 404, 2574); args=['2015-07-02 18:18:40.204210', 'GET', '/register/None', 'HTTP/1.1', 404, 2574]
+[02/Jul/2015 18:18:48] DEBUG             [django.db.backends:79] (0.002) QUERY = 'SELECT "hello_about_me"."id", "hello_about_me"."name", "hello_about_me"."surname", "hello_about_me"."bio", "hello_about_me"."contacts", "hello_about_me"."birth_date", "hello_about_me"."email", "hello_about_me"."jabber", "hello_about_me"."skype", "hello_about_me"."photo" FROM "hello_about_me" ORDER BY "hello_about_me"."id" DESC LIMIT 1' - PARAMS = (); args=()
+[02/Jul/2015 18:18:48] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[02/Jul/2015 18:18:48] DEBUG             [django.db.backends:79] (0.000) QUERY = 'UPDATE "hello_about_me" SET "name" = %s, "surname" = %s, "bio" = %s, "contacts" = %s, "birth_date" = %s, "email" = %s, "jabber" = %s, "skype" = %s, "photo" = %s WHERE "hello_about_me"."id" = %s ' - PARAMS = ('name', 'surname', 'bio', 'contacts', '2015-07-22', 'wertuk2@gmail.com', 'id', 'skype', 'photos/897156_Whh9jzs.png', 1); args=('name', 'surname', 'bio', 'contacts', '2015-07-22', 'wertuk2@gmail.com', 'id', 'skype', 'photos/897156_Whh9jzs.png', 1)
+[02/Jul/2015 18:18:48] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[02/Jul/2015 18:18:48] DEBUG             [django.db.backends:79] (0.000) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-02 18:18:48.737613', 'POST', '/register/', 'HTTP/1.1', 200, 2); args=['2015-07-02 18:18:48.737613', 'POST', '/register/', 'HTTP/1.1', 200, 2]
+[02/Jul/2015 18:18:50] DEBUG             [django.db.backends:79] (0.002) QUERY = 'SELECT "hello_about_me"."id", "hello_about_me"."name", "hello_about_me"."surname", "hello_about_me"."bio", "hello_about_me"."contacts", "hello_about_me"."birth_date", "hello_about_me"."email", "hello_about_me"."jabber", "hello_about_me"."skype", "hello_about_me"."photo" FROM "hello_about_me" WHERE "hello_about_me"."id" = %s ' - PARAMS = (1,); args=(1,)
+[02/Jul/2015 18:18:50] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[02/Jul/2015 18:18:50] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-02 18:18:50.829734', 'GET', '/', 'HTTP/1.1', 200, 1863); args=['2015-07-02 18:18:50.829734', 'GET', '/', 'HTTP/1.1', 200, 1863]
+[02/Jul/2015 18:18:51] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[02/Jul/2015 18:18:51] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-02 18:18:51.076117', 'GET', '/uploads/photos/897156_Whh9jzs.png', 'HTTP/1.1', 200, 1572); args=['2015-07-02 18:18:51.076117', 'GET', '/uploads/photos/897156_Whh9jzs.png', 'HTTP/1.1', 200, 1572]

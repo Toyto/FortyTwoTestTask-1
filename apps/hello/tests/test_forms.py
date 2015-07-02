@@ -1,6 +1,6 @@
 from django.test import TestCase
 from django.core.urlresolvers import reverse
-from apps.hello.models import About_me
+from apps.hello.forms import AuthorForm
 
 
 class FormTest(TestCase):
@@ -11,16 +11,13 @@ class FormTest(TestCase):
         response = self.client.get(reverse('register'))
         self.assertEqual(response.status_code, 200)
 
-    def test_edit_form_data(self):
-        """ Test register page data """
-        response = self.client.get(reverse('index'))
-        self.assertEqual(response.status_code, 200)
-        data = About_me.objects.get(pk=1)
-        self.assertContains(response, data.name, 1)
-        self.assertContains(response, data.surname, 1)
-        self.assertContains(response, data.birth_date, 1)
-        self.assertContains(response, data.bio, 1)
-        self.assertContains(response, data.email, 1)
-        self.assertContains(response, data.jabber, 1)
-        self.assertContains(response, data.skype, 1)
-        self.assertContains(response, data.contacts, 1)
+    def test_forms(self):
+        """ Test form """
+        form_data = {'name': 'Andrew', 'surname': 'Morn',
+                     'birth_date': '1995-05-05',
+                     'bio': 'bio', 'contacts': '1999119',
+                     'email': 'asd@adsd.com',
+                     'jabber': 'jid', 'skype': 'mysk'
+                     }
+        form = AuthorForm(data=form_data)
+        self.assertEqual(form.is_valid(), True)
