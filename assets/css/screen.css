@@ -1,1 +1,51 @@
- 
+.picture {
+    display: block;
+    max-width:200px;
+    max-height:200px;
+    width: auto;
+    height: auto;
+    border: 2px solid #000;
+}
+
+.row {
+    display: inline;
+    float: left;
+    margin-right: 20px;
+}
+
+#register_page {
+    margin-left: 10%;
+}
+
+.one {
+    width:150px;
+    display:inline-block;
+    text-align:right;
+}
+
+.two {
+    width:100px;
+    display:inline-block;
+    text-align:right;
+}
+
+.contacts, .bio {
+    text-align: center;
+}
+
+.int_con {
+    margin-left: 20%;
+}
+
+.formfield * {
+    vertical-align: text-top;
+}
+
+label {
+    padding-right: 15px;
+    clear: left;
+}
+
+#id_photo {
+    display: inline-block;
+}

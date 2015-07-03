@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
     function block_form() {
         $(".btns").hide();
         $("#loading").show();
@@ -14,7 +15,6 @@ $(document).ready(function() {
 
     var callback = {
         beforeSubmit: function(form, options) {
-            // return false to cancel submit
             block_form();
         },
         success: function() {
@@ -47,6 +47,9 @@ $(document).ready(function() {
             preview.readAsDataURL(input.files[0]);}}
 
     $(function () {
-        $("#id_photo").change(readURL)
+        $("#id_photo").change(readURL);
+        $(".picture").show();
     });
+
+    $("input[type='text']").val("");
 });

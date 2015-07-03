@@ -6,13 +6,13 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
         <meta charset="utf-8">
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/screen.css' %}">
   </head>
   <body>
       <h1>
         42 Coffee Cups Test Assignment
       </h1>
       <a href="{% url 'index' %}">Home</a>
-      <a href="{% url 'register' %}" style="margin-left: 80%;">Login</a>
     {%block content%}
     {%endblock%}
       <div class="col-sm-12 pull-left" style="margin-right: 10%;">

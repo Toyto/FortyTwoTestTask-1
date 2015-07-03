@@ -3,6 +3,7 @@
 
 {% block content %}
 <div>
+    <a href="{% url 'register' %}" style="margin-left: 80%;">Login</a>
     <div class="col-sm-6 pull-left">
         <h3>Name: {{data.name}}</h3>
         <h3>Last name: {{data.surname}}</h3>
@@ -10,13 +11,9 @@
         <h3>Bio: {{data.bio}}</h3>
         <h3>Photo:</h3>
         {% if data.photo %}
-            <img class="picture" src="{{ data.photo.url }}" style="
-                display: block;
-                max-width:200px;
-                max-height:200px;
-                width: auto;
-                height: auto;
-            ">
+            <img class="picture" src="{{ data.photo.url }}">
+        {% else %}
+            <img class="picture" src="{% static 'images/blank_photo.jpg' %}">
         {% endif %}
     </div>
     <div class="col-sm-6 pull-right">
