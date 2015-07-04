@@ -1,6 +1,8 @@
 from django.views.generic import TemplateView, FormView
 from django.http import HttpResponseBadRequest, HttpResponse
 from django.core.urlresolvers import reverse
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
 
 from .models import About_me, AllRequests
 from .forms import AuthorForm
@@ -38,6 +40,7 @@ class CreateAuthView(FormView):
     template_name = 'register.html'
     form_class = AuthorForm
 
+    @method_decorator(login_required)
     def post(self, request, *args, **kwargs):
         contacts = About_me.objects.last()
         form = AuthorForm(request.POST, request.FILES, instance=contacts)

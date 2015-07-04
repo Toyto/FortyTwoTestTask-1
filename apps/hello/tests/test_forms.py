@@ -13,6 +13,7 @@ class FormTest(TestCase):
 
     def test_forms(self):
         """ Test form """
+        self.client.login(username='admin', password='admin')
         form_data = {'name': 'Andrew', 'surname': 'Morn',
                      'birth_date': '1995-05-05',
                      'bio': 'bio', 'contacts': '1999119',

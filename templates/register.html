@@ -19,6 +19,7 @@
 
 {% block content %}
 <div id="register_page">
+    <h3><a href="{% url 'index' %}" style="margin-left: -11%;">Home</a></h3>
     <form name="register" method="POST" enctype="multipart/form-data" id="register_form">
     {% csrf_token %}
         <div class="row">
@@ -49,7 +50,7 @@
                 <a href="{% url 'index' %}"><button type="button" class="btns">Cancel</button></a>
                 <span style="display: none;" id="loading">Loading....</span>
                 <span style="display: none;" id="form_error">ERROR! Fill all fields and try again.</span>
-                <span style="display: none;" id="form_complete">Success</span>
+                <span style="display: none;" id="form_complete">Changes has been saved</span>
             </div>
         </div>
     </form>
