@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
     function block_form() {
-        $(".btns").hide();
         $("#loading").show();
         $('textarea').attr('disabled', 'disabled');
         $('input').attr('disabled', 'disabled');
@@ -30,7 +29,6 @@ $(document).ready(function() {
             setTimeout(function() {
                 $("#form_error").hide();
             }, 5000);
-            $(".btns").show();
             alert('You make some errors, fix it and try again');
         }
     }

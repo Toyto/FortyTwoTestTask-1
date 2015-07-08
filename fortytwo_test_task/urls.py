@@ -1,24 +1,21 @@
-from django.conf.urls import include, url
-from django.contrib import admin
-from apps.hello.views import IndexView, RequestView, CreateAuthView
-from django.conf import settings
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-from django.views.generic import RedirectView
-from django.conf.urls.static import static
-
-
+from django.conf.urls import patterns, include, url
+from django.conf import settings
+from django.contrib import admin
 admin.autodiscover()
 
-urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', IndexView.as_view(), name='index'),
-    url(r'^requests/$', RequestView.as_view(), name='requests'),
-    url(r'^register/$', CreateAuthView.as_view(), name='register'),
-    url(r'^accounts/login/$', 'django.contrib.auth.views.login', name='login'),
-    url(r'^accounts/profile/$', RedirectView.as_view(url='/')),
-    url(r'^accounts/logout/$',
-        'django.contrib.auth.views.logout', name='logout'),
-]
+urlpatterns = patterns('',
+                       url(r'^', include('apps.hello.urls')),
+                       url(r'^admin/', include(admin.site.urls),
+                           name='django-admin'),
+                       url(r'^admin/doc/',
+                           include('django.contrib.admindocs.urls')),
 
+                       (r'^admin/jsi18n/',
+                           'django.views.i18n.javascript_catalog'),
+                       (r'^uploads/(?P<path>.*)$',
+                           'django.views.static.serve',
+                           {'document_root': settings.MEDIA_ROOT}),
+
+                       )
 urlpatterns += staticfiles_urlpatterns()
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
