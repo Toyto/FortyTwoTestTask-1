@@ -13,10 +13,9 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', IndexView.as_view(), name='index'),
     url(r'^requests/$', RequestView.as_view(), name='requests'),
-    url(r'^accounts/profile/register/$',
-        CreateAuthView.as_view(), name='register'),
+    url(r'^edit_person/$', CreateAuthView.as_view(), name='register'),
     url(r'^accounts/login/$', 'django.contrib.auth.views.login', name='login'),
-    url(r'^accounts/profile/$', RedirectView.as_view(url='register/')),
+    url(r'^accounts/profile/$', RedirectView.as_view(url='/')),
     url(r'^accounts/logout/$',
         'django.contrib.auth.views.logout', name='logout'),
 ]

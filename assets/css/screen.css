@@ -49,3 +49,7 @@ label {
 #id_photo {
     display: inline-block;
 }
+
+form {
+    margin: 3%;
+}
