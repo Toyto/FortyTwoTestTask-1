@@ -10609,3 +10609,301 @@ AttributeError: 'CreateAuthView' object has no attribute 'object'
 [09/Jul/2015 07:16:11] WARNING             [django.request:143] Not Found: /edit_person/None
 [09/Jul/2015 07:16:11] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
 [09/Jul/2015 07:16:11] DEBUG             [django.db.backends:79] (0.002) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:16:11.268163', 'GET', '/edit_person/None', 'HTTP/1.1', 404, 3989); args=['2015-07-09 07:16:11.268163', 'GET', '/edit_person/None', 'HTTP/1.1', 404, 3989]
+[09/Jul/2015 07:42:41] DEBUG             [django.db.backends:79] (0.001) QUERY = 'SELECT "hello_about_me"."id", "hello_about_me"."name", "hello_about_me"."surname", "hello_about_me"."bio", "hello_about_me"."contacts", "hello_about_me"."birth_date", "hello_about_me"."email", "hello_about_me"."jabber", "hello_about_me"."skype", "hello_about_me"."photo" FROM "hello_about_me" WHERE "hello_about_me"."id" = %s ' - PARAMS = (1,); args=(1,)
+[09/Jul/2015 07:42:41] DEBUG             [django.db.backends:79] (0.001) QUERY = 'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > %s  AND "django_session"."session_key" = %s )' - PARAMS = ('2015-07-09 07:42:41.417679', 'n63i7npbqj8zerllpj5kxjhkbze99anb'); args=('2015-07-09 07:42:41.417679', 'n63i7npbqj8zerllpj5kxjhkbze99anb')
+[09/Jul/2015 07:42:41] DEBUG             [django.db.backends:79] (0.001) QUERY = 'SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = %s ' - PARAMS = (1,); args=(1,)
+[09/Jul/2015 07:42:41] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:42:41] DEBUG             [django.db.backends:79] (0.004) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:42:41.450091', 'GET', '/', 'HTTP/1.1', 200, 1837); args=['2015-07-09 07:42:41.450091', 'GET', '/', 'HTTP/1.1', 200, 1837]
+[09/Jul/2015 07:42:41] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:42:41] DEBUG             [django.db.backends:79] (0.002) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:42:41.852080', 'GET', '/uploads/photos/897156_rJBdTTb.png', 'HTTP/1.1', 304, 0); args=['2015-07-09 07:42:41.852080', 'GET', '/uploads/photos/897156_rJBdTTb.png', 'HTTP/1.1', 304, 0]
+[09/Jul/2015 07:42:43] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:42:43] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:42:43.923986', 'GET', '/edit_person/', 'HTTP/1.1', 200, 3998); args=['2015-07-09 07:42:43.923986', 'GET', '/edit_person/', 'HTTP/1.1', 200, 3998]
+[09/Jul/2015 07:42:44] WARNING             [django.request:143] Not Found: /edit_person/static/images/blank_photo.jpg
+[09/Jul/2015 07:42:44] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:42:44] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:42:44.210913', 'GET', '/edit_person/static/images/blank_photo.jpg', 'HTTP/1.1', 404, 4064); args=['2015-07-09 07:42:44.210913', 'GET', '/edit_person/static/images/blank_photo.jpg', 'HTTP/1.1', 404, 4064]
+[09/Jul/2015 07:45:07] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:45:07] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:45:07.822182', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4103); args=['2015-07-09 07:45:07.822182', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4103]
+[09/Jul/2015 07:45:08] WARNING             [django.request:143] Not Found: /edit_person/static/images/blank_photo.jpg
+[09/Jul/2015 07:45:08] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:45:08] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:45:08.163738', 'GET', '/edit_person/static/images/blank_photo.jpg', 'HTTP/1.1', 404, 4064); args=['2015-07-09 07:45:08.163738', 'GET', '/edit_person/static/images/blank_photo.jpg', 'HTTP/1.1', 404, 4064]
+[09/Jul/2015 07:45:29] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:45:29] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:45:29.661822', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4111); args=['2015-07-09 07:45:29.661822', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4111]
+[09/Jul/2015 07:45:29] WARNING             [django.request:143] Not Found: /edit_person/static/images/blank_photo.jpg
+[09/Jul/2015 07:45:29] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:45:29] DEBUG             [django.db.backends:79] (0.003) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:45:29.952363', 'GET', '/edit_person/static/images/blank_photo.jpg', 'HTTP/1.1', 404, 4064); args=['2015-07-09 07:45:29.952363', 'GET', '/edit_person/static/images/blank_photo.jpg', 'HTTP/1.1', 404, 4064]
+[09/Jul/2015 07:45:50] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:45:50] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:45:50.420415', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4111); args=['2015-07-09 07:45:50.420415', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4111]
+[09/Jul/2015 07:45:50] WARNING             [django.request:143] Not Found: /edit_person/static/images/blank_photo.jpg
+[09/Jul/2015 07:45:50] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:45:50] DEBUG             [django.db.backends:79] (0.002) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:45:50.685904', 'GET', '/edit_person/static/images/blank_photo.jpg', 'HTTP/1.1', 404, 4064); args=['2015-07-09 07:45:50.685904', 'GET', '/edit_person/static/images/blank_photo.jpg', 'HTTP/1.1', 404, 4064]
+[09/Jul/2015 07:46:55] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:46:55] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:46:55.691894', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4111); args=['2015-07-09 07:46:55.691894', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4111]
+[09/Jul/2015 07:46:55] WARNING             [django.request:143] Not Found: /edit_person/static/images/blank_photo.jpg
+[09/Jul/2015 07:46:55] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:46:55] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:46:55.968563', 'GET', '/edit_person/static/images/blank_photo.jpg', 'HTTP/1.1', 404, 4064); args=['2015-07-09 07:46:55.968563', 'GET', '/edit_person/static/images/blank_photo.jpg', 'HTTP/1.1', 404, 4064]
+[09/Jul/2015 07:47:12] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:47:12] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:47:12.475087', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4111); args=['2015-07-09 07:47:12.475087', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4111]
+[09/Jul/2015 07:47:12] WARNING             [django.request:143] Not Found: /edit_person/static/images/blank_photo.jpg
+[09/Jul/2015 07:47:12] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:47:12] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:47:12.738131', 'GET', '/edit_person/static/images/blank_photo.jpg', 'HTTP/1.1', 404, 4064); args=['2015-07-09 07:47:12.738131', 'GET', '/edit_person/static/images/blank_photo.jpg', 'HTTP/1.1', 404, 4064]
+[09/Jul/2015 07:48:10] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:48:10] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:48:10.156672', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4134); args=['2015-07-09 07:48:10.156672', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4134]
+[09/Jul/2015 07:48:10] WARNING             [django.request:143] Not Found: /edit_person/static/images/blank_photo.jpg
+[09/Jul/2015 07:48:10] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:48:10] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:48:10.466089', 'GET', '/edit_person/static/images/blank_photo.jpg', 'HTTP/1.1', 404, 4064); args=['2015-07-09 07:48:10.466089', 'GET', '/edit_person/static/images/blank_photo.jpg', 'HTTP/1.1', 404, 4064]
+[09/Jul/2015 07:48:24] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:48:24] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:48:24.901252', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4134); args=['2015-07-09 07:48:24.901252', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4134]
+[09/Jul/2015 07:48:25] WARNING             [django.request:143] Not Found: /edit_person/static/images/blank_photo.jpg
+[09/Jul/2015 07:48:25] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:48:25] DEBUG             [django.db.backends:79] (0.002) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:48:25.141036', 'GET', '/edit_person/static/images/blank_photo.jpg', 'HTTP/1.1', 404, 4064); args=['2015-07-09 07:48:25.141036', 'GET', '/edit_person/static/images/blank_photo.jpg', 'HTTP/1.1', 404, 4064]
+[09/Jul/2015 07:48:45] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:48:45] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:48:45.915398', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4111); args=['2015-07-09 07:48:45.915398', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4111]
+[09/Jul/2015 07:48:46] WARNING             [django.request:143] Not Found: /edit_person/static/images/blank_photo.jpg
+[09/Jul/2015 07:48:46] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:48:46] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:48:46.194134', 'GET', '/edit_person/static/images/blank_photo.jpg', 'HTTP/1.1', 404, 4064); args=['2015-07-09 07:48:46.194134', 'GET', '/edit_person/static/images/blank_photo.jpg', 'HTTP/1.1', 404, 4064]
+[09/Jul/2015 07:49:47] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:49:47] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:49:47.532697', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4126); args=['2015-07-09 07:49:47.532697', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4126]
+[09/Jul/2015 07:49:47] WARNING             [django.request:143] Not Found: /edit_person/static/images/blank_photo.jpg
+[09/Jul/2015 07:49:47] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:49:47] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:49:47.991783', 'GET', '/edit_person/static/images/blank_photo.jpg', 'HTTP/1.1', 404, 4064); args=['2015-07-09 07:49:47.991783', 'GET', '/edit_person/static/images/blank_photo.jpg', 'HTTP/1.1', 404, 4064]
+[09/Jul/2015 07:52:53] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:52:53] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:52:53.025032', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4126); args=['2015-07-09 07:52:53.025032', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4126]
+[09/Jul/2015 07:52:53] WARNING             [django.request:143] Not Found: /edit_person/static/images/blank_photo.jpg
+[09/Jul/2015 07:52:53] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:52:53] DEBUG             [django.db.backends:79] (0.004) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:52:53.337657', 'GET', '/edit_person/static/images/blank_photo.jpg', 'HTTP/1.1', 404, 4064); args=['2015-07-09 07:52:53.337657', 'GET', '/edit_person/static/images/blank_photo.jpg', 'HTTP/1.1', 404, 4064]
+[09/Jul/2015 07:53:06] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:53:06] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:53:06.655379', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4126); args=['2015-07-09 07:53:06.655379', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4126]
+[09/Jul/2015 07:53:06] WARNING             [django.request:143] Not Found: /edit_person/static/images/blank_photo.jpg
+[09/Jul/2015 07:53:06] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:53:06] DEBUG             [django.db.backends:79] (0.002) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:53:06.942190', 'GET', '/edit_person/static/images/blank_photo.jpg', 'HTTP/1.1', 404, 4064); args=['2015-07-09 07:53:06.942190', 'GET', '/edit_person/static/images/blank_photo.jpg', 'HTTP/1.1', 404, 4064]
+[09/Jul/2015 07:54:00] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:54:00] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:54:00.740469', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4101); args=['2015-07-09 07:54:00.740469', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4101]
+[09/Jul/2015 07:54:01] WARNING             [django.request:143] Not Found: /edit_person/None
+[09/Jul/2015 07:54:01] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:54:01] DEBUG             [django.db.backends:79] (0.002) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:54:01.051203', 'GET', '/edit_person/None', 'HTTP/1.1', 404, 3989); args=['2015-07-09 07:54:01.051203', 'GET', '/edit_person/None', 'HTTP/1.1', 404, 3989]
+[09/Jul/2015 07:54:18] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:54:18] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:54:18.907129', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4101); args=['2015-07-09 07:54:18.907129', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4101]
+[09/Jul/2015 07:54:19] WARNING             [django.request:143] Not Found: /edit_person/None
+[09/Jul/2015 07:54:19] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:54:19] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:54:19.199215', 'GET', '/edit_person/None', 'HTTP/1.1', 404, 3989); args=['2015-07-09 07:54:19.199215', 'GET', '/edit_person/None', 'HTTP/1.1', 404, 3989]
+[09/Jul/2015 07:54:42] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:54:42] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:54:42.153321', 'GET', '/edit_person/', 'HTTP/1.1', 200, 3988); args=['2015-07-09 07:54:42.153321', 'GET', '/edit_person/', 'HTTP/1.1', 200, 3988]
+[09/Jul/2015 07:54:42] WARNING             [django.request:143] Not Found: /edit_person/None
+[09/Jul/2015 07:54:42] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:54:42] DEBUG             [django.db.backends:79] (0.005) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:54:42.386221', 'GET', '/edit_person/None', 'HTTP/1.1', 404, 3989); args=['2015-07-09 07:54:42.386221', 'GET', '/edit_person/None', 'HTTP/1.1', 404, 3989]
+[09/Jul/2015 07:55:14] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:55:14] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:55:14.858148', 'GET', '/edit_person/', 'HTTP/1.1', 200, 3988); args=['2015-07-09 07:55:14.858148', 'GET', '/edit_person/', 'HTTP/1.1', 200, 3988]
+[09/Jul/2015 07:55:15] WARNING             [django.request:143] Not Found: /edit_person/None
+[09/Jul/2015 07:55:15] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:55:15] DEBUG             [django.db.backends:79] (0.002) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:55:15.118617', 'GET', '/edit_person/None', 'HTTP/1.1', 404, 3989); args=['2015-07-09 07:55:15.118617', 'GET', '/edit_person/None', 'HTTP/1.1', 404, 3989]
+[09/Jul/2015 07:59:22] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:59:22] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:59:22.420398', 'GET', '/edit_person/', 'HTTP/1.1', 200, 3988); args=['2015-07-09 07:59:22.420398', 'GET', '/edit_person/', 'HTTP/1.1', 200, 3988]
+[09/Jul/2015 07:59:22] WARNING             [django.request:143] Not Found: /edit_person/None
+[09/Jul/2015 07:59:22] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:59:22] DEBUG             [django.db.backends:79] (0.002) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:59:22.703971', 'GET', '/edit_person/None', 'HTTP/1.1', 404, 3989); args=['2015-07-09 07:59:22.703971', 'GET', '/edit_person/None', 'HTTP/1.1', 404, 3989]
+[09/Jul/2015 07:59:28] DEBUG             [django.db.backends:79] (0.001) QUERY = 'SELECT "hello_about_me"."id", "hello_about_me"."name", "hello_about_me"."surname", "hello_about_me"."bio", "hello_about_me"."contacts", "hello_about_me"."birth_date", "hello_about_me"."email", "hello_about_me"."jabber", "hello_about_me"."skype", "hello_about_me"."photo" FROM "hello_about_me" WHERE "hello_about_me"."id" = %s ' - PARAMS = (1,); args=(1,)
+[09/Jul/2015 07:59:28] DEBUG             [django.db.backends:79] (0.001) QUERY = 'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > %s  AND "django_session"."session_key" = %s )' - PARAMS = ('2015-07-09 07:59:28.190936', 'n63i7npbqj8zerllpj5kxjhkbze99anb'); args=('2015-07-09 07:59:28.190936', 'n63i7npbqj8zerllpj5kxjhkbze99anb')
+[09/Jul/2015 07:59:28] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = %s ' - PARAMS = (1,); args=(1,)
+[09/Jul/2015 07:59:28] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:59:28] DEBUG             [django.db.backends:79] (0.000) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:59:28.201326', 'GET', '/', 'HTTP/1.1', 200, 1837); args=['2015-07-09 07:59:28.201326', 'GET', '/', 'HTTP/1.1', 200, 1837]
+[09/Jul/2015 07:59:28] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:59:28] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:59:28.568683', 'GET', '/uploads/photos/897156_rJBdTTb.png', 'HTTP/1.1', 304, 0); args=['2015-07-09 07:59:28.568683', 'GET', '/uploads/photos/897156_rJBdTTb.png', 'HTTP/1.1', 304, 0]
+[09/Jul/2015 07:59:29] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:59:29] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:59:29.700167', 'GET', '/edit_person/', 'HTTP/1.1', 200, 3988); args=['2015-07-09 07:59:29.700167', 'GET', '/edit_person/', 'HTTP/1.1', 200, 3988]
+[09/Jul/2015 07:59:29] WARNING             [django.request:143] Not Found: /edit_person/None
+[09/Jul/2015 07:59:29] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 07:59:29] DEBUG             [django.db.backends:79] (0.003) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 07:59:29.946294', 'GET', '/edit_person/None', 'HTTP/1.1', 404, 3989); args=['2015-07-09 07:59:29.946294', 'GET', '/edit_person/None', 'HTTP/1.1', 404, 3989]
+[09/Jul/2015 08:01:11] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 08:01:11] DEBUG             [django.db.backends:79] (0.002) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 08:01:11.190191', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4006); args=['2015-07-09 08:01:11.190191', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4006]
+[09/Jul/2015 08:01:11] WARNING             [django.request:143] Not Found: /edit_person/None
+[09/Jul/2015 08:01:11] DEBUG             [django.db.backends:79] (0.002) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 08:01:11] DEBUG             [django.db.backends:79] (0.004) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 08:01:11.499339', 'GET', '/edit_person/None', 'HTTP/1.1', 404, 3989); args=['2015-07-09 08:01:11.499339', 'GET', '/edit_person/None', 'HTTP/1.1', 404, 3989]
+[09/Jul/2015 08:01:11] WARNING             [django.request:143] Not Found: /images/blank_photo.gif
+[09/Jul/2015 08:01:11] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 08:01:11] DEBUG             [django.db.backends:79] (0.003) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 08:01:11.720965', 'GET', '/images/blank_photo.gif', 'HTTP/1.1', 404, 4007); args=['2015-07-09 08:01:11.720965', 'GET', '/images/blank_photo.gif', 'HTTP/1.1', 404, 4007]
+[09/Jul/2015 08:01:46] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 08:01:46] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 08:01:46.693962', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4012); args=['2015-07-09 08:01:46.693962', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4012]
+[09/Jul/2015 08:01:47] WARNING             [django.request:143] Not Found: /edit_person/None
+[09/Jul/2015 08:01:47] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 08:01:47] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 08:01:47.077326', 'GET', '/edit_person/None', 'HTTP/1.1', 404, 3989); args=['2015-07-09 08:01:47.077326', 'GET', '/edit_person/None', 'HTTP/1.1', 404, 3989]
+[09/Jul/2015 08:01:47] WARNING             [django.request:143] Not Found: /edit_person/static/images/blank_photo.gif
+[09/Jul/2015 08:01:47] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 08:01:47] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 08:01:47.299593', 'GET', '/edit_person/static/images/blank_photo.gif', 'HTTP/1.1', 404, 4064); args=['2015-07-09 08:01:47.299593', 'GET', '/edit_person/static/images/blank_photo.gif', 'HTTP/1.1', 404, 4064]
+[09/Jul/2015 08:02:04] WARNING             [django.request:143] Not Found: /edit_person/static/images/blank_photo.gif
+[09/Jul/2015 08:02:04] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 08:02:04] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 08:02:04.248498', 'GET', '/edit_person/static/images/blank_photo.gif', 'HTTP/1.1', 404, 4064); args=['2015-07-09 08:02:04.248498', 'GET', '/edit_person/static/images/blank_photo.gif', 'HTTP/1.1', 404, 4064]
+[09/Jul/2015 08:02:32] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 08:02:32] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 08:02:32.232750', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4012); args=['2015-07-09 08:02:32.232750', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4012]
+[09/Jul/2015 08:02:32] WARNING             [django.request:143] Not Found: /edit_person/None
+[09/Jul/2015 08:02:32] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 08:02:32] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 08:02:32.610185', 'GET', '/edit_person/None', 'HTTP/1.1', 404, 3989); args=['2015-07-09 08:02:32.610185', 'GET', '/edit_person/None', 'HTTP/1.1', 404, 3989]
+[09/Jul/2015 08:02:32] WARNING             [django.request:143] Not Found: /edit_person/static/images/blank_photo.jpg
+[09/Jul/2015 08:02:32] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 08:02:32] DEBUG             [django.db.backends:79] (0.003) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 08:02:32.825912', 'GET', '/edit_person/static/images/blank_photo.jpg', 'HTTP/1.1', 404, 4064); args=['2015-07-09 08:02:32.825912', 'GET', '/edit_person/static/images/blank_photo.jpg', 'HTTP/1.1', 404, 4064]
+[09/Jul/2015 08:02:40] WARNING             [django.request:143] Not Found: /edit_person/static/images/blank_photo.jpg
+[09/Jul/2015 08:02:40] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 08:02:40] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 08:02:40.737077', 'GET', '/edit_person/static/images/blank_photo.jpg', 'HTTP/1.1', 404, 4064); args=['2015-07-09 08:02:40.737077', 'GET', '/edit_person/static/images/blank_photo.jpg', 'HTTP/1.1', 404, 4064]
+[09/Jul/2015 08:03:36] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 08:03:36] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 08:03:36.692044', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4012); args=['2015-07-09 08:03:36.692044', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4012]
+[09/Jul/2015 08:03:37] WARNING             [django.request:143] Not Found: /edit_person/None
+[09/Jul/2015 08:03:37] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 08:03:37] DEBUG             [django.db.backends:79] (0.004) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 08:03:37.240423', 'GET', '/edit_person/None', 'HTTP/1.1', 404, 3989); args=['2015-07-09 08:03:37.240423', 'GET', '/edit_person/None', 'HTTP/1.1', 404, 3989]
+[09/Jul/2015 08:03:37] WARNING             [django.request:143] Not Found: /edit_person/static/images/blank_photo.gif
+[09/Jul/2015 08:03:37] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 08:03:37] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 08:03:37.443897', 'GET', '/edit_person/static/images/blank_photo.gif', 'HTTP/1.1', 404, 4064); args=['2015-07-09 08:03:37.443897', 'GET', '/edit_person/static/images/blank_photo.gif', 'HTTP/1.1', 404, 4064]
+[09/Jul/2015 08:03:42] WARNING             [django.request:143] Not Found: /edit_person/static/
+[09/Jul/2015 08:03:42] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 08:03:42] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 08:03:42.850836', 'GET', '/edit_person/static/', 'HTTP/1.1', 404, 3998); args=['2015-07-09 08:03:42.850836', 'GET', '/edit_person/static/', 'HTTP/1.1', 404, 3998]
+[09/Jul/2015 08:04:53] WARNING             [django.request:143] Not Found: /edit_person/static/images/blank_photo.gif
+[09/Jul/2015 08:04:53] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 08:04:53] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 08:04:53.139137', 'GET', '/edit_person/static/images/blank_photo.gif', 'HTTP/1.1', 404, 4064); args=['2015-07-09 08:04:53.139137', 'GET', '/edit_person/static/images/blank_photo.gif', 'HTTP/1.1', 404, 4064]
+[09/Jul/2015 08:05:25] ERROR             [django.request:224] Internal Server Error: /edit_person/
+Traceback (most recent call last):
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/core/handlers/base.py", line 137, in get_response
+    response = response.render()
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/response.py", line 80, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/response.py", line 56, in resolve_template
+    return loader.select_template(template)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/loader.py", line 180, in select_template
+    return get_template(template_name)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/base.py", line 254, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/base.py", line 360, in compile_filter
+    return FilterExpression(token, self)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/base.py", line 577, in __init__
+    "from '%s'" % (token[upto:], token))
+django.template.base.TemplateSyntaxError: Could not parse the remainder: ' 'register'' from 'url 'register''
+[09/Jul/2015 08:05:25] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 08:05:25] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 08:05:25.427921', 'GET', '/edit_person/', 'HTTP/1.1', 500, 161128); args=['2015-07-09 08:05:25.427921', 'GET', '/edit_person/', 'HTTP/1.1', 500, 161128]
+[09/Jul/2015 08:05:50] ERROR             [django.request:224] Internal Server Error: /edit_person/
+Traceback (most recent call last):
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/core/handlers/base.py", line 137, in get_response
+    response = response.render()
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/response.py", line 80, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/response.py", line 56, in resolve_template
+    return loader.select_template(template)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/loader.py", line 180, in select_template
+    return get_template(template_name)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/base.py", line 254, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/base.py", line 360, in compile_filter
+    return FilterExpression(token, self)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/base.py", line 577, in __init__
+    "from '%s'" % (token[upto:], token))
+django.template.base.TemplateSyntaxError: Could not parse the remainder: ' "register"' from 'url "register"'
+[09/Jul/2015 08:05:50] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 08:05:50] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 08:05:50.290550', 'GET', '/edit_person/', 'HTTP/1.1', 500, 161152); args=['2015-07-09 08:05:50.290550', 'GET', '/edit_person/', 'HTTP/1.1', 500, 161152]
+[09/Jul/2015 08:06:37] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 08:06:37] DEBUG             [django.db.backends:79] (0.002) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 08:06:37.777887', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4024); args=['2015-07-09 08:06:37.777887', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4024]
+[09/Jul/2015 08:06:38] WARNING             [django.request:143] Not Found: /edit_person/None
+[09/Jul/2015 08:06:38] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 08:06:38] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 08:06:38.127135', 'GET', '/edit_person/None', 'HTTP/1.1', 404, 3989); args=['2015-07-09 08:06:38.127135', 'GET', '/edit_person/None', 'HTTP/1.1', 404, 3989]
+[09/Jul/2015 08:06:38] WARNING             [django.request:143] Not Found: /edit_person/edit_person/static/images/blank_photo.gif
+[09/Jul/2015 08:06:38] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 08:06:38] DEBUG             [django.db.backends:79] (0.002) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 08:06:38.325504', 'GET', '/edit_person/edit_person/static/images/blank_photo.gif', 'HTTP/1.1', 404, 4100); args=['2015-07-09 08:06:38.325504', 'GET', '/edit_person/edit_person/static/images/blank_photo.gif', 'HTTP/1.1', 404, 4100]
+[09/Jul/2015 08:06:48] WARNING             [django.request:143] Not Found: /edit_person/static/images/blank_photo.gif
+[09/Jul/2015 08:06:48] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 08:06:48] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 08:06:48.482575', 'GET', '/edit_person/static/images/blank_photo.gif', 'HTTP/1.1', 404, 4064); args=['2015-07-09 08:06:48.482575', 'GET', '/edit_person/static/images/blank_photo.gif', 'HTTP/1.1', 404, 4064]
+[09/Jul/2015 08:08:02] ERROR             [django.request:224] Internal Server Error: /edit_person/
+Traceback (most recent call last):
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/core/handlers/base.py", line 137, in get_response
+    response = response.render()
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/response.py", line 80, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/response.py", line 56, in resolve_template
+    return loader.select_template(template)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/loader.py", line 180, in select_template
+    return get_template(template_name)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/base.py", line 254, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/base.py", line 360, in compile_filter
+    return FilterExpression(token, self)
+  File "/home/andrew/MyEnvs/TestTask42/lib/python3.4/site-packages/django/template/base.py", line 577, in __init__
+    "from '%s'" % (token[upto:], token))
+django.template.base.TemplateSyntaxError: Could not parse the remainder: ' 'images/blank_photo.gif'' from 'static 'images/blank_photo.gif''
+[09/Jul/2015 08:08:02] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 08:08:02] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 08:08:02.808286', 'GET', '/edit_person/', 'HTTP/1.1', 500, 161248); args=['2015-07-09 08:08:02.808286', 'GET', '/edit_person/', 'HTTP/1.1', 500, 161248]
+[09/Jul/2015 08:09:15] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 08:09:15] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 08:09:15.592805', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4012); args=['2015-07-09 08:09:15.592805', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4012]
+[09/Jul/2015 08:09:15] WARNING             [django.request:143] Not Found: /edit_person/None
+[09/Jul/2015 08:09:15] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 08:09:15] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 08:09:15.974158', 'GET', '/edit_person/None', 'HTTP/1.1', 404, 3989); args=['2015-07-09 08:09:15.974158', 'GET', '/edit_person/None', 'HTTP/1.1', 404, 3989]
+[09/Jul/2015 08:09:27] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 08:09:27] DEBUG             [django.db.backends:79] (0.002) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 08:09:27.930485', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4012); args=['2015-07-09 08:09:27.930485', 'GET', '/edit_person/', 'HTTP/1.1', 200, 4012]
+[09/Jul/2015 08:09:28] WARNING             [django.request:143] Not Found: /edit_person/None
+[09/Jul/2015 08:09:28] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 08:09:28] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 08:09:28.264199', 'GET', '/edit_person/None', 'HTTP/1.1', 404, 3989); args=['2015-07-09 08:09:28.264199', 'GET', '/edit_person/None', 'HTTP/1.1', 404, 3989]
