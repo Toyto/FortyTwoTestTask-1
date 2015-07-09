@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 
 {% load staticfiles %}
-
+{% load edit_link %}
 {% block content %}
 <div>
+<<<<<<< HEAD
         {% if user.is_authenticated %}
             <a href="{% url 'register' %}" style="margin-left: 80%;">Edit</a>
             <a href="{% url 'logout' %}" style="margin-left: 80%;">Logout</a>
@@ -23,11 +24,14 @@
         {% endif %}
     </div>
     <div class="col-sm-6 pull-right">
+        <a href="{% url 'register' %}" style="margin-left: 58%;">|Edit object|</a>
+        <a href="{% edit_link data %}">|Admin page|</a>
         <h3>Email: {{ data.email }}</h3>
         <h3>Jabber ID: {{ data.jabber }}</h3>
         <h3>Skype: {{ data.skype }}</h3>
         <h3>Other contacts: {{data.contacts}}</h3>
     </div>
+    {% endfor %}
 </div>
 {% endblock %}
 
