@@ -11366,3 +11366,604 @@ AttributeError: type object 'QuerySet' has no attribute '_meta'
 [01/Jul/2015 18:01:48] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
 [01/Jul/2015 18:01:48] DEBUG             [django.db.backends:79] (0.000) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-01 18:01:48.091790', 'GET', '/admin/', 'HTTP/1.1', 200, 6459); args=['2015-07-01 18:01:48.091790', 'GET', '/admin/', 'HTTP/1.1', 200, 6459]
 >>>>>>> 0fe60d6cfa3606f146f4f17d6160170b50cee2b2
+[09/Jul/2015 21:11:04] ERROR             [django.request:224] Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 274, in parse
+    compile_func = self.tags[command]
+KeyError: 'endfor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/core/handlers/base.py", line 137, in get_response
+    response = response.render()
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/response.py", line 80, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/response.py", line 56, in resolve_template
+    return loader.select_template(template)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 180, in select_template
+    return get_template(template_name)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 276, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 331, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+django.template.base.TemplateSyntaxError: Invalid block tag: 'endfor', expected 'endblock'
+[09/Jul/2015 21:11:04] ERROR             [django.request:224] Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 274, in parse
+    compile_func = self.tags[command]
+KeyError: 'endfor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/core/handlers/base.py", line 137, in get_response
+    response = response.render()
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/response.py", line 80, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/response.py", line 56, in resolve_template
+    return loader.select_template(template)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 180, in select_template
+    return get_template(template_name)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 276, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 331, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+django.template.base.TemplateSyntaxError: Invalid block tag: 'endfor', expected 'endblock'
+[09/Jul/2015 21:11:04] ERROR             [django.request:224] Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 274, in parse
+    compile_func = self.tags[command]
+KeyError: 'endfor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/core/handlers/base.py", line 137, in get_response
+    response = response.render()
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/response.py", line 80, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/response.py", line 56, in resolve_template
+    return loader.select_template(template)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 180, in select_template
+    return get_template(template_name)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 276, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 331, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+django.template.base.TemplateSyntaxError: Invalid block tag: 'endfor', expected 'endblock'
+[09/Jul/2015 21:11:04] ERROR             [django.request:224] Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 274, in parse
+    compile_func = self.tags[command]
+KeyError: 'endfor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/core/handlers/base.py", line 137, in get_response
+    response = response.render()
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/response.py", line 80, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/response.py", line 56, in resolve_template
+    return loader.select_template(template)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 180, in select_template
+    return get_template(template_name)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 276, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 331, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+django.template.base.TemplateSyntaxError: Invalid block tag: 'endfor', expected 'endblock'
+[09/Jul/2015 21:11:04] ERROR             [django.request:224] Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 274, in parse
+    compile_func = self.tags[command]
+KeyError: 'endfor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/core/handlers/base.py", line 137, in get_response
+    response = response.render()
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/response.py", line 80, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/response.py", line 56, in resolve_template
+    return loader.select_template(template)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 180, in select_template
+    return get_template(template_name)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 276, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 331, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+django.template.base.TemplateSyntaxError: Invalid block tag: 'endfor', expected 'endblock'
+[09/Jul/2015 21:11:04] ERROR             [django.request:224] Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 274, in parse
+    compile_func = self.tags[command]
+KeyError: 'endfor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/core/handlers/base.py", line 137, in get_response
+    response = response.render()
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/response.py", line 80, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/response.py", line 56, in resolve_template
+    return loader.select_template(template)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 180, in select_template
+    return get_template(template_name)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 276, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 331, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+django.template.base.TemplateSyntaxError: Invalid block tag: 'endfor', expected 'endblock'
+[09/Jul/2015 21:11:26] DEBUG             [django.db.backends:79] (0.001) QUERY = 'SELECT "hello_about_me"."id", "hello_about_me"."name", "hello_about_me"."surname", "hello_about_me"."bio", "hello_about_me"."contacts", "hello_about_me"."birth_date", "hello_about_me"."email", "hello_about_me"."jabber", "hello_about_me"."skype", "hello_about_me"."photo" FROM "hello_about_me" WHERE "hello_about_me"."id" = %s ' - PARAMS = (1,); args=(1,)
+[09/Jul/2015 21:11:26] ERROR             [django.request:224] Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/backends/sqlite3/base.py", line 452, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: hello_about_me
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/views/generic/base.py", line 154, in get
+    context = self.get_context_data(**kwargs)
+  File "/home/andrew/MyEnvs/TestTask/FortyTwoTestTask-1/apps/hello/views.py", line 21, in get_context_data
+    context['data'] = About_me.objects.get(pk=1)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/models/manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/models/query.py", line 304, in get
+    num = len(clone)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/models/query.py", line 77, in __len__
+    self._fetch_all()
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/models/query.py", line 857, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/models/query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/models/sql/compiler.py", line 713, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/models/sql/compiler.py", line 786, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/backends/util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/utils/six.py", line 549, in reraise
+    raise value.with_traceback(tb)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/backends/sqlite3/base.py", line 452, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: hello_about_me
+[09/Jul/2015 21:11:26] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT "hello_about_me"."id", "hello_about_me"."name", "hello_about_me"."surname", "hello_about_me"."bio", "hello_about_me"."contacts", "hello_about_me"."birth_date", "hello_about_me"."email", "hello_about_me"."jabber", "hello_about_me"."skype", "hello_about_me"."photo" FROM "hello_about_me" WHERE "hello_about_me"."id" = %s  LIMIT 21' - PARAMS = (1,); args=(1,)
+[09/Jul/2015 21:11:26] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT "hello_about_me"."id", "hello_about_me"."name", "hello_about_me"."surname", "hello_about_me"."bio", "hello_about_me"."contacts", "hello_about_me"."birth_date", "hello_about_me"."email", "hello_about_me"."jabber", "hello_about_me"."skype", "hello_about_me"."photo" FROM "hello_about_me" LIMIT 21' - PARAMS = (); args=()
+[09/Jul/2015 21:11:26] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT "hello_about_me"."id", "hello_about_me"."name", "hello_about_me"."surname", "hello_about_me"."bio", "hello_about_me"."contacts", "hello_about_me"."birth_date", "hello_about_me"."email", "hello_about_me"."jabber", "hello_about_me"."skype", "hello_about_me"."photo" FROM "hello_about_me" WHERE "hello_about_me"."id" = %s  LIMIT 21' - PARAMS = (1,); args=(1,)
+[09/Jul/2015 21:11:26] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT "hello_about_me"."id", "hello_about_me"."name", "hello_about_me"."surname", "hello_about_me"."bio", "hello_about_me"."contacts", "hello_about_me"."birth_date", "hello_about_me"."email", "hello_about_me"."jabber", "hello_about_me"."skype", "hello_about_me"."photo" FROM "hello_about_me" WHERE "hello_about_me"."id" = %s  LIMIT 21' - PARAMS = (1,); args=(1,)
+[09/Jul/2015 21:11:26] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT "hello_about_me"."id", "hello_about_me"."name", "hello_about_me"."surname", "hello_about_me"."bio", "hello_about_me"."contacts", "hello_about_me"."birth_date", "hello_about_me"."email", "hello_about_me"."jabber", "hello_about_me"."skype", "hello_about_me"."photo" FROM "hello_about_me" WHERE "hello_about_me"."id" = %s  LIMIT 21' - PARAMS = (1,); args=(1,)
+[09/Jul/2015 21:11:26] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 21:11:26] DEBUG             [django.db.backends:79] (0.000) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 21:11:26.508070', 'GET', '/', 'HTTP/1.1', 500, 158356); args=['2015-07-09 21:11:26.508070', 'GET', '/', 'HTTP/1.1', 500, 158356]
+[09/Jul/2015 21:11:26] ERROR             [django.request:224] Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/backends/sqlite3/base.py", line 452, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: hello_allrequests
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/core/handlers/base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "/home/andrew/MyEnvs/TestTask/FortyTwoTestTask-1/apps/hello/middleware.py", line 12, in process_response
+    content_len=len(response.content))
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/models/manager.py", line 157, in create
+    return self.get_queryset().create(**kwargs)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/models/query.py", line 322, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/models/base.py", line 545, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/models/base.py", line 573, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/models/base.py", line 654, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/models/base.py", line 687, in _do_insert
+    using=using, raw=raw)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/models/manager.py", line 232, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/models/query.py", line 1514, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/models/sql/compiler.py", line 903, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/backends/util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/utils/six.py", line 549, in reraise
+    raise value.with_traceback(tb)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/backends/sqlite3/base.py", line 452, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: hello_allrequests
+[09/Jul/2015 21:11:26] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT "hello_allrequests"."id", "hello_allrequests"."date_time", "hello_allrequests"."request_method", "hello_allrequests"."path", "hello_allrequests"."server_protocol", "hello_allrequests"."status_code", "hello_allrequests"."content_len" FROM "hello_allrequests" ORDER BY "hello_allrequests"."date_time" ASC LIMIT 21' - PARAMS = (); args=()
+[09/Jul/2015 21:11:27] WARNING             [django.request:143] Not Found: /favicon.ico
+[09/Jul/2015 21:11:27] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 21:11:27] DEBUG             [django.db.backends:79] (0.000) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 21:11:27.111657', 'GET', '/favicon.ico', 'HTTP/1.1', 404, 3974); args=['2015-07-09 21:11:27.111657', 'GET', '/favicon.ico', 'HTTP/1.1', 404, 3974]
+[09/Jul/2015 21:11:27] ERROR             [django.request:224] Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/backends/sqlite3/base.py", line 452, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: hello_allrequests
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/core/handlers/base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "/home/andrew/MyEnvs/TestTask/FortyTwoTestTask-1/apps/hello/middleware.py", line 12, in process_response
+    content_len=len(response.content))
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/models/manager.py", line 157, in create
+    return self.get_queryset().create(**kwargs)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/models/query.py", line 322, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/models/base.py", line 545, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/models/base.py", line 573, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/models/base.py", line 654, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/models/base.py", line 687, in _do_insert
+    using=using, raw=raw)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/models/manager.py", line 232, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/models/query.py", line 1514, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/models/sql/compiler.py", line 903, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/backends/util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/utils/six.py", line 549, in reraise
+    raise value.with_traceback(tb)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/db/backends/sqlite3/base.py", line 452, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: hello_allrequests
+[09/Jul/2015 21:11:27] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT "hello_allrequests"."id", "hello_allrequests"."date_time", "hello_allrequests"."request_method", "hello_allrequests"."path", "hello_allrequests"."server_protocol", "hello_allrequests"."status_code", "hello_allrequests"."content_len" FROM "hello_allrequests" ORDER BY "hello_allrequests"."date_time" ASC LIMIT 21' - PARAMS = (); args=()
+[09/Jul/2015 21:11:43] DEBUG             [django.db.backends:79] (0.000) QUERY = "\n            SELECT name FROM sqlite_master\n            WHERE type='table' AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+[09/Jul/2015 21:11:43] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 21:11:43] DEBUG             [django.db.backends:79] (0.000) QUERY = 'CREATE TABLE "django_admin_log" (\n    "id" integer NOT NULL PRIMARY KEY,\n    "action_time" datetime NOT NULL,\n    "user_id" integer NOT NULL,\n    "content_type_id" integer,\n    "object_id" text,\n    "object_repr" varchar(200) NOT NULL,\n    "action_flag" smallint unsigned NOT NULL,\n    "change_message" text NOT NULL\n)\n;' - PARAMS = (); args=None
+[09/Jul/2015 21:11:43] DEBUG             [django.db.backends:79] (0.000) QUERY = 'CREATE TABLE "auth_permission" (\n    "id" integer NOT NULL PRIMARY KEY,\n    "name" varchar(50) NOT NULL,\n    "content_type_id" integer NOT NULL,\n    "codename" varchar(100) NOT NULL,\n    UNIQUE ("content_type_id", "codename")\n)\n;' - PARAMS = (); args=None
+[09/Jul/2015 21:11:43] DEBUG             [django.db.backends:79] (0.000) QUERY = 'CREATE TABLE "auth_group_permissions" (\n    "id" integer NOT NULL PRIMARY KEY,\n    "group_id" integer NOT NULL,\n    "permission_id" integer NOT NULL REFERENCES "auth_permission" ("id"),\n    UNIQUE ("group_id", "permission_id")\n)\n;' - PARAMS = (); args=None
+[09/Jul/2015 21:11:43] DEBUG             [django.db.backends:79] (0.000) QUERY = 'CREATE TABLE "auth_group" (\n    "id" integer NOT NULL PRIMARY KEY,\n    "name" varchar(80) NOT NULL UNIQUE\n)\n;' - PARAMS = (); args=None
+[09/Jul/2015 21:11:43] DEBUG             [django.db.backends:79] (0.000) QUERY = 'CREATE TABLE "auth_user_groups" (\n    "id" integer NOT NULL PRIMARY KEY,\n    "user_id" integer NOT NULL,\n    "group_id" integer NOT NULL REFERENCES "auth_group" ("id"),\n    UNIQUE ("user_id", "group_id")\n)\n;' - PARAMS = (); args=None
+[09/Jul/2015 21:11:43] DEBUG             [django.db.backends:79] (0.000) QUERY = 'CREATE TABLE "auth_user_user_permissions" (\n    "id" integer NOT NULL PRIMARY KEY,\n    "user_id" integer NOT NULL,\n    "permission_id" integer NOT NULL REFERENCES "auth_permission" ("id"),\n    UNIQUE ("user_id", "permission_id")\n)\n;' - PARAMS = (); args=None
+[09/Jul/2015 21:11:43] DEBUG             [django.db.backends:79] (0.000) QUERY = 'CREATE TABLE "auth_user" (\n    "id" integer NOT NULL PRIMARY KEY,\n    "password" varchar(128) NOT NULL,\n    "last_login" datetime NOT NULL,\n    "is_superuser" bool NOT NULL,\n    "username" varchar(30) NOT NULL UNIQUE,\n    "first_name" varchar(30) NOT NULL,\n    "last_name" varchar(30) NOT NULL,\n    "email" varchar(75) NOT NULL,\n    "is_staff" bool NOT NULL,\n    "is_active" bool NOT NULL,\n    "date_joined" datetime NOT NULL\n)\n;' - PARAMS = (); args=None
+[09/Jul/2015 21:11:43] DEBUG             [django.db.backends:79] (0.000) QUERY = 'CREATE TABLE "django_content_type" (\n    "id" integer NOT NULL PRIMARY KEY,\n    "name" varchar(100) NOT NULL,\n    "app_label" varchar(100) NOT NULL,\n    "model" varchar(100) NOT NULL,\n    UNIQUE ("app_label", "model")\n)\n;' - PARAMS = (); args=None
+[09/Jul/2015 21:11:43] DEBUG             [django.db.backends:79] (0.000) QUERY = 'CREATE TABLE "django_session" (\n    "session_key" varchar(40) NOT NULL PRIMARY KEY,\n    "session_data" text NOT NULL,\n    "expire_date" datetime NOT NULL\n)\n;' - PARAMS = (); args=None
+[09/Jul/2015 21:11:43] DEBUG             [django.db.backends:79] (0.000) QUERY = 'CREATE TABLE "south_migrationhistory" (\n    "id" integer NOT NULL PRIMARY KEY,\n    "app_name" varchar(255) NOT NULL,\n    "migration" varchar(255) NOT NULL,\n    "applied" datetime NOT NULL\n)\n;' - PARAMS = (); args=None
+[09/Jul/2015 21:11:44] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT "django_content_type"."id", "django_content_type"."name", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = %s  AND "django_content_type"."model" = %s )' - PARAMS = ('admin', 'logentry'); args=('admin', 'logentry')
+[09/Jul/2015 21:11:44] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 21:11:44] DEBUG             [django.db.backends:79] (0.000) QUERY = 'INSERT INTO "django_content_type" ("name", "app_label", "model") VALUES (%s, %s, %s)' - PARAMS = ('log entry', 'admin', 'logentry'); args=['log entry', 'admin', 'logentry']
+[09/Jul/2015 21:11:44] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ( "auth_permission"."content_type_id" = "django_content_type"."id" ) WHERE "auth_permission"."content_type_id" IN (%s) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC' - PARAMS = (1,); args=(1,)
+[09/Jul/2015 21:11:44] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 21:11:44] DEBUG             [django.db.backends:79] (0.000) QUERY = 'INSERT INTO "auth_permission" ("name", "content_type_id", "codename") SELECT %s AS "name", %s AS "content_type_id", %s AS "codename" UNION ALL SELECT %s, %s, %s UNION ALL SELECT %s, %s, %s' - PARAMS = ('Can add log entry', 1, 'add_logentry', 'Can change log entry', 1, 'change_logentry', 'Can delete log entry', 1, 'delete_logentry'); args=('Can add log entry', 1, 'add_logentry', 'Can change log entry', 1, 'change_logentry', 'Can delete log entry', 1, 'delete_logentry')
+[09/Jul/2015 21:11:44] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT "django_content_type"."id", "django_content_type"."name", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = %s  ORDER BY "django_content_type"."name" ASC' - PARAMS = ('admin',); args=('admin',)
+[09/Jul/2015 21:11:44] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT "django_content_type"."id", "django_content_type"."name", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = %s  AND "django_content_type"."model" = %s )' - PARAMS = ('auth', 'permission'); args=('auth', 'permission')
+[09/Jul/2015 21:11:44] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 21:11:44] DEBUG             [django.db.backends:79] (0.000) QUERY = 'INSERT INTO "django_content_type" ("name", "app_label", "model") VALUES (%s, %s, %s)' - PARAMS = ('permission', 'auth', 'permission'); args=['permission', 'auth', 'permission']
+[09/Jul/2015 21:11:44] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT "django_content_type"."id", "django_content_type"."name", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = %s  AND "django_content_type"."model" = %s )' - PARAMS = ('auth', 'group'); args=('auth', 'group')
+[09/Jul/2015 21:11:44] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 21:11:44] DEBUG             [django.db.backends:79] (0.000) QUERY = 'INSERT INTO "django_content_type" ("name", "app_label", "model") VALUES (%s, %s, %s)' - PARAMS = ('group', 'auth', 'group'); args=['group', 'auth', 'group']
+[09/Jul/2015 21:11:44] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT "django_content_type"."id", "django_content_type"."name", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = %s  AND "django_content_type"."model" = %s )' - PARAMS = ('auth', 'user'); args=('auth', 'user')
+[09/Jul/2015 21:11:44] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 21:11:44] DEBUG             [django.db.backends:79] (0.000) QUERY = 'INSERT INTO "django_content_type" ("name", "app_label", "model") VALUES (%s, %s, %s)' - PARAMS = ('user', 'auth', 'user'); args=['user', 'auth', 'user']
+[09/Jul/2015 21:11:44] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ( "auth_permission"."content_type_id" = "django_content_type"."id" ) WHERE "auth_permission"."content_type_id" IN (%s, %s, %s) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC' - PARAMS = (2, 3, 4); args=(2, 3, 4)
+[09/Jul/2015 21:11:44] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 21:11:44] DEBUG             [django.db.backends:79] (0.000) QUERY = 'INSERT INTO "auth_permission" ("name", "content_type_id", "codename") SELECT %s AS "name", %s AS "content_type_id", %s AS "codename" UNION ALL SELECT %s, %s, %s UNION ALL SELECT %s, %s, %s UNION ALL SELECT %s, %s, %s UNION ALL SELECT %s, %s, %s UNION ALL SELECT %s, %s, %s UNION ALL SELECT %s, %s, %s UNION ALL SELECT %s, %s, %s UNION ALL SELECT %s, %s, %s' - PARAMS = ('Can add permission', 2, 'add_permission', 'Can change permission', 2, 'change_permission', 'Can delete permission', 2, 'delete_permission', 'Can add group', 3, 'add_group', 'Can change group', 3, 'change_group', 'Can delete group', 3, 'delete_group', 'Can add user', 4, 'add_user', 'Can change user', 4, 'change_user', 'Can delete user', 4, 'delete_user'); args=('Can add permission', 2, 'add_permission', 'Can change permission', 2, 'change_permission', 'Can delete permission', 2, 'delete_permission', 'Can add group', 3, 'add_group', 'Can change group', 3, 'change_group', 'Can delete group', 3, 'delete_group', 'Can add user', 4, 'add_user', 'Can change user', 4, 'change_user', 'Can delete user', 4, 'delete_user')
+[09/Jul/2015 21:11:50] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT "django_content_type"."id", "django_content_type"."name", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = %s  ORDER BY "django_content_type"."name" ASC' - PARAMS = ('auth',); args=('auth',)
+[09/Jul/2015 21:11:50] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT "django_content_type"."id", "django_content_type"."name", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = %s  AND "django_content_type"."model" = %s )' - PARAMS = ('contenttypes', 'contenttype'); args=('contenttypes', 'contenttype')
+[09/Jul/2015 21:11:50] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 21:11:50] DEBUG             [django.db.backends:79] (0.000) QUERY = 'INSERT INTO "django_content_type" ("name", "app_label", "model") VALUES (%s, %s, %s)' - PARAMS = ('content type', 'contenttypes', 'contenttype'); args=['content type', 'contenttypes', 'contenttype']
+[09/Jul/2015 21:11:50] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ( "auth_permission"."content_type_id" = "django_content_type"."id" ) WHERE "auth_permission"."content_type_id" IN (%s) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC' - PARAMS = (5,); args=(5,)
+[09/Jul/2015 21:11:50] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 21:11:50] DEBUG             [django.db.backends:79] (0.000) QUERY = 'INSERT INTO "auth_permission" ("name", "content_type_id", "codename") SELECT %s AS "name", %s AS "content_type_id", %s AS "codename" UNION ALL SELECT %s, %s, %s UNION ALL SELECT %s, %s, %s' - PARAMS = ('Can add content type', 5, 'add_contenttype', 'Can change content type', 5, 'change_contenttype', 'Can delete content type', 5, 'delete_contenttype'); args=('Can add content type', 5, 'add_contenttype', 'Can change content type', 5, 'change_contenttype', 'Can delete content type', 5, 'delete_contenttype')
+[09/Jul/2015 21:11:50] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT "django_content_type"."id", "django_content_type"."name", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = %s  ORDER BY "django_content_type"."name" ASC' - PARAMS = ('contenttypes',); args=('contenttypes',)
+[09/Jul/2015 21:11:50] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT "django_content_type"."id", "django_content_type"."name", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = %s  AND "django_content_type"."model" = %s )' - PARAMS = ('sessions', 'session'); args=('sessions', 'session')
+[09/Jul/2015 21:11:50] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 21:11:50] DEBUG             [django.db.backends:79] (0.000) QUERY = 'INSERT INTO "django_content_type" ("name", "app_label", "model") VALUES (%s, %s, %s)' - PARAMS = ('session', 'sessions', 'session'); args=['session', 'sessions', 'session']
+[09/Jul/2015 21:11:50] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ( "auth_permission"."content_type_id" = "django_content_type"."id" ) WHERE "auth_permission"."content_type_id" IN (%s) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC' - PARAMS = (6,); args=(6,)
+[09/Jul/2015 21:11:50] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 21:11:50] DEBUG             [django.db.backends:79] (0.000) QUERY = 'INSERT INTO "auth_permission" ("name", "content_type_id", "codename") SELECT %s AS "name", %s AS "content_type_id", %s AS "codename" UNION ALL SELECT %s, %s, %s UNION ALL SELECT %s, %s, %s' - PARAMS = ('Can add session', 6, 'add_session', 'Can change session', 6, 'change_session', 'Can delete session', 6, 'delete_session'); args=('Can add session', 6, 'add_session', 'Can change session', 6, 'change_session', 'Can delete session', 6, 'delete_session')
+[09/Jul/2015 21:11:50] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT "django_content_type"."id", "django_content_type"."name", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = %s  ORDER BY "django_content_type"."name" ASC' - PARAMS = ('sessions',); args=('sessions',)
+[09/Jul/2015 21:11:50] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT "django_content_type"."id", "django_content_type"."name", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = %s  AND "django_content_type"."model" = %s )' - PARAMS = ('south', 'migrationhistory'); args=('south', 'migrationhistory')
+[09/Jul/2015 21:11:50] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 21:11:50] DEBUG             [django.db.backends:79] (0.000) QUERY = 'INSERT INTO "django_content_type" ("name", "app_label", "model") VALUES (%s, %s, %s)' - PARAMS = ('migration history', 'south', 'migrationhistory'); args=['migration history', 'south', 'migrationhistory']
+[09/Jul/2015 21:11:51] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ( "auth_permission"."content_type_id" = "django_content_type"."id" ) WHERE "auth_permission"."content_type_id" IN (%s) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC' - PARAMS = (7,); args=(7,)
+[09/Jul/2015 21:11:51] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 21:11:51] DEBUG             [django.db.backends:79] (0.000) QUERY = 'INSERT INTO "auth_permission" ("name", "content_type_id", "codename") SELECT %s AS "name", %s AS "content_type_id", %s AS "codename" UNION ALL SELECT %s, %s, %s UNION ALL SELECT %s, %s, %s' - PARAMS = ('Can add migration history', 7, 'add_migrationhistory', 'Can change migration history', 7, 'change_migrationhistory', 'Can delete migration history', 7, 'delete_migrationhistory'); args=('Can add migration history', 7, 'add_migrationhistory', 'Can change migration history', 7, 'change_migrationhistory', 'Can delete migration history', 7, 'delete_migrationhistory')
+[09/Jul/2015 21:11:51] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT "django_content_type"."id", "django_content_type"."name", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = %s  ORDER BY "django_content_type"."name" ASC' - PARAMS = ('south',); args=('south',)
+[09/Jul/2015 21:11:51] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 21:11:51] DEBUG             [django.db.backends:79] (0.000) QUERY = 'CREATE INDEX "django_admin_log_6340c63c" ON "django_admin_log" ("user_id");' - PARAMS = (); args=None
+[09/Jul/2015 21:11:51] DEBUG             [django.db.backends:79] (0.000) QUERY = 'CREATE INDEX "django_admin_log_37ef4eb4" ON "django_admin_log" ("content_type_id");' - PARAMS = (); args=None
+[09/Jul/2015 21:11:51] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 21:11:51] DEBUG             [django.db.backends:79] (0.000) QUERY = 'CREATE INDEX "auth_permission_37ef4eb4" ON "auth_permission" ("content_type_id");' - PARAMS = (); args=None
+[09/Jul/2015 21:11:51] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 21:11:51] DEBUG             [django.db.backends:79] (0.000) QUERY = 'CREATE INDEX "auth_group_permissions_5f412f9a" ON "auth_group_permissions" ("group_id");' - PARAMS = (); args=None
+[09/Jul/2015 21:11:51] DEBUG             [django.db.backends:79] (0.000) QUERY = 'CREATE INDEX "auth_group_permissions_83d7f98b" ON "auth_group_permissions" ("permission_id");' - PARAMS = (); args=None
+[09/Jul/2015 21:11:51] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 21:11:51] DEBUG             [django.db.backends:79] (0.000) QUERY = 'CREATE INDEX "auth_user_groups_6340c63c" ON "auth_user_groups" ("user_id");' - PARAMS = (); args=None
+[09/Jul/2015 21:11:51] DEBUG             [django.db.backends:79] (0.000) QUERY = 'CREATE INDEX "auth_user_groups_5f412f9a" ON "auth_user_groups" ("group_id");' - PARAMS = (); args=None
+[09/Jul/2015 21:11:51] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 21:11:51] DEBUG             [django.db.backends:79] (0.000) QUERY = 'CREATE INDEX "auth_user_user_permissions_6340c63c" ON "auth_user_user_permissions" ("user_id");' - PARAMS = (); args=None
+[09/Jul/2015 21:11:51] DEBUG             [django.db.backends:79] (0.000) QUERY = 'CREATE INDEX "auth_user_user_permissions_83d7f98b" ON "auth_user_user_permissions" ("permission_id");' - PARAMS = (); args=None
+[09/Jul/2015 21:11:52] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 21:11:52] DEBUG             [django.db.backends:79] (0.000) QUERY = 'CREATE INDEX "django_session_b7b81f0c" ON "django_session" ("expire_date");' - PARAMS = (); args=None
+[09/Jul/2015 21:11:52] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 21:11:52] DEBUG             [django.db.backends:79] (0.000) QUERY = 'UPDATE "hello_about_me" SET "name" = %s, "surname" = %s, "bio" = %s, "contacts" = %s, "birth_date" = %s, "email" = %s, "jabber" = %s, "skype" = %s, "photo" = %s WHERE "hello_about_me"."id" = %s ' - PARAMS = ('Andrew', 'Komar', 'I am a student. I am fond of programming.', '380935989148', '1997-06-02', 'wertuk2@gmail.com', 'andreykomar@climm.org', 'andrikwow33', '', 1); args=('Andrew', 'Komar', 'I am a student. I am fond of programming.', '380935989148', '1997-06-02', 'wertuk2@gmail.com', 'andreykomar@climm.org', 'andrikwow33', '', 1)
+[09/Jul/2015 21:12:03] DEBUG             [django.db.backends:79] (0.001) QUERY = 'SELECT "south_migrationhistory"."id", "south_migrationhistory"."app_name", "south_migrationhistory"."migration", "south_migrationhistory"."applied" FROM "south_migrationhistory" WHERE "south_migrationhistory"."applied" IS NOT NULL ORDER BY "south_migrationhistory"."applied" ASC' - PARAMS = (); args=()
+[09/Jul/2015 21:12:03] DEBUG             [django.db.backends:79] (0.160) QUERY = 'CREATE TABLE ROLLBACK_TEST (X INT)' - PARAMS = (); args=None
+[09/Jul/2015 21:12:03] DEBUG             [django.db.backends:79] (0.000) QUERY = 'INSERT INTO ROLLBACK_TEST (X) VALUES (8)' - PARAMS = (); args=None
+[09/Jul/2015 21:12:03] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT COUNT(X) FROM ROLLBACK_TEST' - PARAMS = (); args=None
+[09/Jul/2015 21:12:03] DEBUG             [django.db.backends:79] (0.122) QUERY = 'DROP TABLE ROLLBACK_TEST' - PARAMS = (); args=None
+[09/Jul/2015 21:12:04] DEBUG             [django.db.backends:79] (0.169) QUERY = 'CREATE TABLE DDL_TRANSACTION_TEST (X INT)' - PARAMS = (); args=None
+[09/Jul/2015 21:12:04] DEBUG             [django.db.backends:79] (0.000) QUERY = 'CREATE TABLE DDL_TRANSACTION_TEST (X INT)' - PARAMS = (); args=None
+[09/Jul/2015 21:12:04] DEBUG             [django.db.backends:79] (0.145) QUERY = 'DROP TABLE DDL_TRANSACTION_TEST' - PARAMS = (); args=None
+[09/Jul/2015 21:12:04] DEBUG             [django.db.backends:79] (0.136) QUERY = 'CREATE TABLE "hello_about_me" ("id" integer NOT NULL PRIMARY KEY, "name" varchar(33) NOT NULL, "surname" varchar(33) NOT NULL, "bio" varchar(500) NOT NULL, "contacts" varchar(150) NOT NULL, "birth_date" date NOT NULL, "email" varchar(75) NOT NULL, "jabber" varchar(50) NOT NULL, "skype" varchar(33) NOT NULL, "photo" varchar(100) NOT NULL)' - PARAMS = (); args=[]
+[09/Jul/2015 21:12:04] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT "south_migrationhistory"."id", "south_migrationhistory"."app_name", "south_migrationhistory"."migration", "south_migrationhistory"."applied" FROM "south_migrationhistory" WHERE ("south_migrationhistory"."app_name" = %s  AND "south_migrationhistory"."migration" = %s )' - PARAMS = ('hello', '0001_initial'); args=('hello', '0001_initial')
+[09/Jul/2015 21:12:04] DEBUG             [django.db.backends:79] (0.000) QUERY = 'INSERT INTO "south_migrationhistory" ("app_name", "migration", "applied") VALUES (%s, %s, %s)' - PARAMS = ('hello', '0001_initial', '2015-07-09 21:12:04.453007'); args=['hello', '0001_initial', '2015-07-09 21:12:04.453007']
+[09/Jul/2015 21:12:04] DEBUG             [django.db.backends:79] (0.141) QUERY = 'CREATE TABLE "hello_allrequests" ("id" integer NOT NULL PRIMARY KEY, "date_time" datetime NOT NULL, "request_method" varchar(10) NOT NULL, "path" varchar(100) NOT NULL, "server_protocol" varchar(10) NOT NULL, "status_code" integer NOT NULL, "content_len" integer NOT NULL)' - PARAMS = (); args=[]
+[09/Jul/2015 21:12:04] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT "south_migrationhistory"."id", "south_migrationhistory"."app_name", "south_migrationhistory"."migration", "south_migrationhistory"."applied" FROM "south_migrationhistory" WHERE ("south_migrationhistory"."app_name" = %s  AND "south_migrationhistory"."migration" = %s )' - PARAMS = ('hello', '0002_auto__add_allrequests'); args=('hello', '0002_auto__add_allrequests')
+[09/Jul/2015 21:12:04] DEBUG             [django.db.backends:79] (0.000) QUERY = 'INSERT INTO "south_migrationhistory" ("app_name", "migration", "applied") VALUES (%s, %s, %s)' - PARAMS = ('hello', '0002_auto__add_allrequests', '2015-07-09 21:12:04.711880'); args=['hello', '0002_auto__add_allrequests', '2015-07-09 21:12:04.711880']
+[09/Jul/2015 21:12:05] DEBUG             [django.db.backends:79] (0.156) QUERY = 'CREATE TABLE "hello_changeslog" ("id" integer NOT NULL PRIMARY KEY, "model" varchar(35) NOT NULL, "operation" varchar(20) NOT NULL, "date_time" datetime NOT NULL)' - PARAMS = (); args=[]
+[09/Jul/2015 21:12:05] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT "south_migrationhistory"."id", "south_migrationhistory"."app_name", "south_migrationhistory"."migration", "south_migrationhistory"."applied" FROM "south_migrationhistory" WHERE ("south_migrationhistory"."app_name" = %s  AND "south_migrationhistory"."migration" = %s )' - PARAMS = ('hello', '0003_auto__add_changeslog'); args=('hello', '0003_auto__add_changeslog')
+[09/Jul/2015 21:12:05] DEBUG             [django.db.backends:79] (0.000) QUERY = 'INSERT INTO "south_migrationhistory" ("app_name", "migration", "applied") VALUES (%s, %s, %s)' - PARAMS = ('hello', '0003_auto__add_changeslog', '2015-07-09 21:12:05.026612'); args=['hello', '0003_auto__add_changeslog', '2015-07-09 21:12:05.026612']
+[09/Jul/2015 21:12:05] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT "django_content_type"."id", "django_content_type"."name", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = %s  AND "django_content_type"."app_label" = %s )' - PARAMS = ('about_me', 'hello'); args=('about_me', 'hello')
+[09/Jul/2015 21:12:05] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 21:12:05] DEBUG             [django.db.backends:79] (0.000) QUERY = 'INSERT INTO "django_content_type" ("name", "app_label", "model") VALUES (%s, %s, %s)' - PARAMS = ('about_me', 'hello', 'about_me'); args=['about_me', 'hello', 'about_me']
+[09/Jul/2015 21:12:05] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT "django_content_type"."id", "django_content_type"."name", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = %s  AND "django_content_type"."app_label" = %s )' - PARAMS = ('allrequests', 'hello'); args=('allrequests', 'hello')
+[09/Jul/2015 21:12:05] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 21:12:05] DEBUG             [django.db.backends:79] (0.000) QUERY = 'INSERT INTO "django_content_type" ("name", "app_label", "model") VALUES (%s, %s, %s)' - PARAMS = ('all requests', 'hello', 'allrequests'); args=['all requests', 'hello', 'allrequests']
+[09/Jul/2015 21:12:05] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT "django_content_type"."id", "django_content_type"."name", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = %s  AND "django_content_type"."app_label" = %s )' - PARAMS = ('changeslog', 'hello'); args=('changeslog', 'hello')
+[09/Jul/2015 21:12:05] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 21:12:05] DEBUG             [django.db.backends:79] (0.000) QUERY = 'INSERT INTO "django_content_type" ("name", "app_label", "model") VALUES (%s, %s, %s)' - PARAMS = ('changes log', 'hello', 'changeslog'); args=['changes log', 'hello', 'changeslog']
+[09/Jul/2015 21:12:05] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ( "auth_permission"."content_type_id" = "django_content_type"."id" ) WHERE "auth_permission"."content_type_id" IN (%s, %s, %s) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC' - PARAMS = (8, 9, 10); args=(8, 9, 10)
+[09/Jul/2015 21:12:05] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 21:12:05] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "auth_permission" ("name", "content_type_id", "codename") SELECT %s AS "name", %s AS "content_type_id", %s AS "codename" UNION ALL SELECT %s, %s, %s UNION ALL SELECT %s, %s, %s UNION ALL SELECT %s, %s, %s UNION ALL SELECT %s, %s, %s UNION ALL SELECT %s, %s, %s UNION ALL SELECT %s, %s, %s UNION ALL SELECT %s, %s, %s UNION ALL SELECT %s, %s, %s' - PARAMS = ('Can add about_me', 8, 'add_about_me', 'Can change about_me', 8, 'change_about_me', 'Can delete about_me', 8, 'delete_about_me', 'Can add all requests', 9, 'add_allrequests', 'Can change all requests', 9, 'change_allrequests', 'Can delete all requests', 9, 'delete_allrequests', 'Can add changes log', 10, 'add_changeslog', 'Can change changes log', 10, 'change_changeslog', 'Can delete changes log', 10, 'delete_changeslog'); args=('Can add about_me', 8, 'add_about_me', 'Can change about_me', 8, 'change_about_me', 'Can delete about_me', 8, 'delete_about_me', 'Can add all requests', 9, 'add_allrequests', 'Can change all requests', 9, 'change_allrequests', 'Can delete all requests', 9, 'delete_allrequests', 'Can add changes log', 10, 'add_changeslog', 'Can change changes log', 10, 'change_changeslog', 'Can delete changes log', 10, 'delete_changeslog')
+[09/Jul/2015 21:12:05] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT "django_content_type"."id", "django_content_type"."name", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = %s  ORDER BY "django_content_type"."name" ASC' - PARAMS = ('hello',); args=('hello',)
+[09/Jul/2015 21:12:05] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 21:12:05] DEBUG             [django.db.backends:79] (0.000) QUERY = 'UPDATE "hello_about_me" SET "name" = %s, "surname" = %s, "bio" = %s, "contacts" = %s, "birth_date" = %s, "email" = %s, "jabber" = %s, "skype" = %s, "photo" = %s WHERE "hello_about_me"."id" = %s ' - PARAMS = ('Andrew', 'Komar', 'I am a student. I am fond of programming.', '380935989148', '1997-06-02', 'wertuk2@gmail.com', 'andreykomar@climm.org', 'andrikwow33', '', 1); args=('Andrew', 'Komar', 'I am a student. I am fond of programming.', '380935989148', '1997-06-02', 'wertuk2@gmail.com', 'andreykomar@climm.org', 'andrikwow33', '', 1)
+[09/Jul/2015 21:12:05] DEBUG             [django.db.backends:79] (0.000) QUERY = 'INSERT INTO "hello_about_me" ("id", "name", "surname", "bio", "contacts", "birth_date", "email", "jabber", "skype", "photo") SELECT %s AS "id", %s AS "name", %s AS "surname", %s AS "bio", %s AS "contacts", %s AS "birth_date", %s AS "email", %s AS "jabber", %s AS "skype", %s AS "photo"' - PARAMS = (1, 'Andrew', 'Komar', 'I am a student. I am fond of programming.', '380935989148', '1997-06-02', 'wertuk2@gmail.com', 'andreykomar@climm.org', 'andrikwow33', ''); args=(1, 'Andrew', 'Komar', 'I am a student. I am fond of programming.', '380935989148', '1997-06-02', 'wertuk2@gmail.com', 'andreykomar@climm.org', 'andrikwow33', '')
+[09/Jul/2015 21:12:05] DEBUG             [django.db.backends:79] (0.000) QUERY = 'UPDATE "auth_user" SET "password" = %s, "last_login" = %s, "is_superuser" = %s, "username" = %s, "first_name" = %s, "last_name" = %s, "email" = %s, "is_staff" = %s, "is_active" = %s, "date_joined" = %s WHERE "auth_user"."id" = %s ' - PARAMS = ('pbkdf2_sha256$12000$5a6V4KSHCnkK$yZ5g6FsAFeaBLPaecpGB4e9b6cPfx6s8Rxzq0lwCK3c=', '2015-04-05 17:36:10.093000', True, 'admin', '', '', 'admin@admin.com', True, True, '2015-04-05 17:36:10.093000', 1); args=('pbkdf2_sha256$12000$5a6V4KSHCnkK$yZ5g6FsAFeaBLPaecpGB4e9b6cPfx6s8Rxzq0lwCK3c=', '2015-04-05 17:36:10.093000', True, 'admin', '', '', 'admin@admin.com', True, True, '2015-04-05 17:36:10.093000', 1)
+[09/Jul/2015 21:12:05] DEBUG             [django.db.backends:79] (0.000) QUERY = 'INSERT INTO "auth_user" ("id", "password", "last_login", "is_superuser", "username", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined") SELECT %s AS "id", %s AS "password", %s AS "last_login", %s AS "is_superuser", %s AS "username", %s AS "first_name", %s AS "last_name", %s AS "email", %s AS "is_staff", %s AS "is_active", %s AS "date_joined"' - PARAMS = (1, 'pbkdf2_sha256$12000$5a6V4KSHCnkK$yZ5g6FsAFeaBLPaecpGB4e9b6cPfx6s8Rxzq0lwCK3c=', '2015-04-05 17:36:10.093000', True, 'admin', '', '', 'admin@admin.com', True, True, '2015-04-05 17:36:10.093000'); args=(1, 'pbkdf2_sha256$12000$5a6V4KSHCnkK$yZ5g6FsAFeaBLPaecpGB4e9b6cPfx6s8Rxzq0lwCK3c=', '2015-04-05 17:36:10.093000', True, 'admin', '', '', 'admin@admin.com', True, True, '2015-04-05 17:36:10.093000')
+[09/Jul/2015 21:12:05] DEBUG             [django.db.backends:79] (0.000) QUERY = 'DELETE FROM "auth_user_groups" WHERE "auth_user_groups"."user_id" = %s ' - PARAMS = (1,); args=(1,)
+[09/Jul/2015 21:12:05] DEBUG             [django.db.backends:79] (0.000) QUERY = 'DELETE FROM "auth_user_user_permissions" WHERE "auth_user_user_permissions"."user_id" = %s ' - PARAMS = (1,); args=(1,)
+[09/Jul/2015 21:12:05] DEBUG             [django.db.backends:79] (0.000) QUERY = 'UPDATE "hello_about_me" SET "name" = %s, "surname" = %s, "bio" = %s, "contacts" = %s, "birth_date" = %s, "email" = %s, "jabber" = %s, "skype" = %s, "photo" = %s WHERE "hello_about_me"."id" = %s ' - PARAMS = ('Andrew', 'Komar', 'I am a student. I am fond of programming.', '380935989148', '1997-06-02', 'wertuk2@gmail.com', 'andreykomar@climm.org', 'andrikwow33', '', 1); args=('Andrew', 'Komar', 'I am a student. I am fond of programming.', '380935989148', '1997-06-02', 'wertuk2@gmail.com', 'andreykomar@climm.org', 'andrikwow33', '', 1)
+[09/Jul/2015 21:12:05] DEBUG             [django.db.backends:79] (0.000) QUERY = 'UPDATE "auth_user" SET "password" = %s, "last_login" = %s, "is_superuser" = %s, "username" = %s, "first_name" = %s, "last_name" = %s, "email" = %s, "is_staff" = %s, "is_active" = %s, "date_joined" = %s WHERE "auth_user"."id" = %s ' - PARAMS = ('pbkdf2_sha256$12000$5a6V4KSHCnkK$yZ5g6FsAFeaBLPaecpGB4e9b6cPfx6s8Rxzq0lwCK3c=', '2015-04-05 17:36:10.093000', True, 'admin', '', '', 'admin@admin.com', True, True, '2015-04-05 17:36:10.093000', 1); args=('pbkdf2_sha256$12000$5a6V4KSHCnkK$yZ5g6FsAFeaBLPaecpGB4e9b6cPfx6s8Rxzq0lwCK3c=', '2015-04-05 17:36:10.093000', True, 'admin', '', '', 'admin@admin.com', True, True, '2015-04-05 17:36:10.093000', 1)
+[09/Jul/2015 21:12:05] DEBUG             [django.db.backends:79] (0.000) QUERY = 'DELETE FROM "auth_user_groups" WHERE "auth_user_groups"."user_id" = %s ' - PARAMS = (1,); args=(1,)
+[09/Jul/2015 21:12:05] DEBUG             [django.db.backends:79] (0.000) QUERY = 'DELETE FROM "auth_user_user_permissions" WHERE "auth_user_user_permissions"."user_id" = %s ' - PARAMS = (1,); args=(1,)
+[09/Jul/2015 21:12:05] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT sql FROM sqlite_master WHERE tbl_name = %s AND type = %s' - PARAMS = ('auth_user', 'table'); args=['auth_user', 'table']
+[09/Jul/2015 21:12:05] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT sql FROM sqlite_master WHERE tbl_name = %s AND type = %s' - PARAMS = ('auth_user', 'table'); args=['auth_user', 'table']
+[09/Jul/2015 21:12:05] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT sql FROM sqlite_master WHERE tbl_name = %s AND type = %s' - PARAMS = ('hello_about_me', 'table'); args=['hello_about_me', 'table']
+[09/Jul/2015 21:12:05] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT sql FROM sqlite_master WHERE tbl_name = %s AND type = %s' - PARAMS = ('hello_about_me', 'table'); args=['hello_about_me', 'table']
+[09/Jul/2015 21:12:18] DEBUG             [django.db.backends:79] (0.001) QUERY = 'SELECT "hello_about_me"."id", "hello_about_me"."name", "hello_about_me"."surname", "hello_about_me"."bio", "hello_about_me"."contacts", "hello_about_me"."birth_date", "hello_about_me"."email", "hello_about_me"."jabber", "hello_about_me"."skype", "hello_about_me"."photo" FROM "hello_about_me" WHERE "hello_about_me"."id" = %s ' - PARAMS = (1,); args=(1,)
+[09/Jul/2015 21:12:18] ERROR             [django.request:224] Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 274, in parse
+    compile_func = self.tags[command]
+KeyError: 'endfor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/core/handlers/base.py", line 137, in get_response
+    response = response.render()
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/response.py", line 80, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/response.py", line 56, in resolve_template
+    return loader.select_template(template)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 180, in select_template
+    return get_template(template_name)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 276, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/andrew/MyEnvs/TestTask/lib/python3.4/site-packages/django/template/base.py", line 331, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+django.template.base.TemplateSyntaxError: Invalid block tag: 'endfor', expected 'endblock'
+[09/Jul/2015 21:12:18] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 21:12:18] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 21:12:18.332211', 'GET', '/', 'HTTP/1.1', 500, 143034); args=['2015-07-09 21:12:18.332211', 'GET', '/', 'HTTP/1.1', 500, 143034]
+[09/Jul/2015 21:12:19] WARNING             [django.request:143] Not Found: /favicon.ico
+[09/Jul/2015 21:12:19] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 21:12:19] DEBUG             [django.db.backends:79] (0.001) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 21:12:19.051478', 'GET', '/favicon.ico', 'HTTP/1.1', 404, 3974); args=['2015-07-09 21:12:19.051478', 'GET', '/favicon.ico', 'HTTP/1.1', 404, 3974]
+[09/Jul/2015 21:12:54] DEBUG             [django.db.backends:79] (0.002) QUERY = 'SELECT "hello_about_me"."id", "hello_about_me"."name", "hello_about_me"."surname", "hello_about_me"."bio", "hello_about_me"."contacts", "hello_about_me"."birth_date", "hello_about_me"."email", "hello_about_me"."jabber", "hello_about_me"."skype", "hello_about_me"."photo" FROM "hello_about_me" WHERE "hello_about_me"."id" = %s ' - PARAMS = (1,); args=(1,)
+[09/Jul/2015 21:12:54] DEBUG             [django.db.backends:79] (0.000) QUERY = 'SELECT "django_content_type"."id", "django_content_type"."name", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = %s  AND "django_content_type"."model" = %s )' - PARAMS = ('hello', 'about_me'); args=('hello', 'about_me')
+[09/Jul/2015 21:12:54] DEBUG             [django.db.backends:79] (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[09/Jul/2015 21:12:54] DEBUG             [django.db.backends:79] (0.000) QUERY = 'INSERT INTO "hello_allrequests" ("date_time", "request_method", "path", "server_protocol", "status_code", "content_len") VALUES (%s, %s, %s, %s, %s, %s)' - PARAMS = ('2015-07-09 21:12:54.047700', 'GET', '/', 'HTTP/1.1', 200, 1968); args=['2015-07-09 21:12:54.047700', 'GET', '/', 'HTTP/1.1', 200, 1968]
