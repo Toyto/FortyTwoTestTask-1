@@ -49,5 +49,4 @@ $(document).ready(function() {
         $(".picture").show();
     });
 
-    $("input[type='text']").val("");
 });

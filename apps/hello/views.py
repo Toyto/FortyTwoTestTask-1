@@ -41,6 +41,28 @@ class CreateAuthView(FormView):
     template_name = 'register.html'
     form_class = AuthorForm
 
+    def get_context_data(self, **kwargs):
+        context = super(CreateAuthView, self).get_context_data(**kwargs)
+        context['data'] = About_me.objects.get(pk=1)
+        logger.info(u'Landing page request %s', self.request)
+        logger.debug(u'Landing page context %s', context)
+        return context
+
+    def get_initial(self):
+        super(CreateAuthView, self).get_initial()
+        context = self.get_context_data()
+        data = context['data']
+        return {'name': data.name,
+                'surname': data.surname,
+                'bio': data.bio,
+                'contacts': data.contacts,
+                'birth_date': data.birth_date,
+                'email': data.email,
+                'jabber': data.jabber,
+                'skype': data.skype,
+                'photo': data.photo
+                }
+
     @method_decorator(login_required)
     def post(self, request, *args, **kwargs):
         contacts = About_me.objects.last()
