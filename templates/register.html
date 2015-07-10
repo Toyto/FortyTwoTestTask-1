@@ -28,7 +28,11 @@
                 <p><label class="one">Date of birth:</label>{{ form.birth_date }}</p>
                 <p><label for="id_photo" class="one">Photo:</label>{{ form.photo }}</p>
                 <p>
-                    <img class="picture" src="{{ MEDIA.URL }}{{ form.photo.value }}" style="margin-left: 27%;" onError="this.onerror=null;this.src='{{ STATIC_URL }}images/blank_photo.gif'">
+                {% if form.photo.value != '' %}
+                    <img class="picture" src="{{ MEDIA_URL }}{{ form.photo.value }}" style="margin-left: 27%;" onError="this.onerror=null;this.src='{{ STATIC_URL }}images/blank_photo.gif'">
+                {% else %}
+                    <img class="picture" src="{{ MEDIA_URL }}{{ form.photo.value }}" style="margin-left: 27%;" onError="this.onerror=null;this.src='{{ MEDIA_URL }}photos/{{ form.photo.value }}'">
+                {% endif %}
                 </p>
             </div>
             <div class=".col-xs-6 pull-left" style="margin-top: 100%; margin-left: 10%;">
