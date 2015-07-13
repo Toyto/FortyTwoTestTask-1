@@ -1,10 +1,10 @@
 from django.views.generic import TemplateView, FormView
-from django.http import HttpResponseBadRequest, HttpResponse
+from django.http import HttpResponseBadRequest
 from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 
-
+from .util import JsonResponse
 from .models import About_me, AllRequests
 from .forms import AuthorForm
 
@@ -69,6 +69,17 @@ class CreateAuthView(FormView):
         form = AuthorForm(request.POST, request.FILES, instance=contacts)
         if form.is_valid():
             form.save()
-            return HttpResponse('OK')
+            return JsonResponse({'data': {
+                'name': contacts.name,
+                'surname': contacts.surname,
+                'bio': contacts.bio,
+                'contacts': contacts.contacts,
+                'birth_date': str(contacts.birth_date),
+                'email': contacts.email,
+                'jabber': contacts.jabber,
+                'skype': contacts.skype,
+                'photo': contacts.photo.url
+            }
+            })
         else:
             return HttpResponseBadRequest()
