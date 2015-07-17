@@ -83,18 +83,3 @@ class PersonDataView(TemplateView):
                              'skype': data.skype,
                              'photo': data.photo.url
                              })
-
-    def get_context_data(self, **kwargs):
-        context = super(PersonDataView, self).get_context_data(**kwargs)
-        person = About_me.objects.last()
-        person.name = self.request.GET['data[name]']
-        person.surname = self.request.GET['data[surname]']
-        person.bio = self.request.GET['data[bio]']
-        person.birth_date = self.request.GET['data[birth_date]']
-        person.contacts = self.request.GET['data[contacts]']
-        person.skype = self.request.GET['data[skype]']
-        person.email = self.request.GET['data[email]']
-        person.jabber = self.request.GET['data[jabber]']
-        person.photo = self.request.GET['data[photo]']
-        person.save()
-        return context
