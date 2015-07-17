@@ -1,6 +1,7 @@
 from django.conf.urls import include, url
 from django.contrib import admin
-from apps.hello.views import IndexView, RequestView, CreateAuthView
+from apps.hello.views import IndexView, RequestView
+from apps.hello.views import CreateAuthView, PersonDataView
 from django.conf import settings
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.views.generic import RedirectView
@@ -18,6 +19,7 @@ urlpatterns = [
     url(r'^accounts/profile/$', RedirectView.as_view(url='/')),
     url(r'^accounts/logout/$',
         'django.contrib.auth.views.logout', name='logout'),
+    url(r'^person_data/$', PersonDataView.as_view(), name='person_info'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

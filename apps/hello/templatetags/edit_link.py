@@ -4,6 +4,7 @@ from django.contrib.contenttypes.models import ContentType
 register = template.Library()
 
 
+@register.simple_tag
 def edit_link(obj):
     """{% edit_link object %}"""
     new_obj = ContentType.objects.get_for_model(obj.__class__)
@@ -11,5 +12,3 @@ def edit_link(obj):
         'admin:%s_%s_change' % (new_obj.app_label, new_obj.name),
         args=(obj.id,)
     )
-
-register.simple_tag(edit_link)

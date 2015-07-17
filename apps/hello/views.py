@@ -3,6 +3,7 @@ from django.http import HttpResponseBadRequest
 from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
+from django.shortcuts import redirect
 
 from .util import JsonResponse
 from apps.hello import signals  # NOQA
@@ -48,38 +49,52 @@ class CreateAuthView(FormView):
         logger.debug(u'Landing page context %s', context)
         return context
 
-    def get_initial(self):
-        super(CreateAuthView, self).get_initial()
-        context = self.get_context_data()
-        data = context['data']
-        return {'name': data.name,
-                'surname': data.surname,
-                'bio': data.bio,
-                'contacts': data.contacts,
-                'birth_date': data.birth_date,
-                'email': data.email,
-                'jabber': data.jabber,
-                'skype': data.skype,
-                'photo': data.photo
-                }
-
     @method_decorator(login_required)
     def post(self, request, *args, **kwargs):
-        contacts = About_me.objects.last()
-        form = AuthorForm(request.POST, request.FILES, instance=contacts)
+        form = AuthorForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
-            return JsonResponse({'data': {
-                'name': contacts.name,
-                'surname': contacts.surname,
-                'bio': contacts.bio,
-                'contacts': contacts.contacts,
-                'birth_date': str(contacts.birth_date),
-                'email': contacts.email,
-                'jabber': contacts.jabber,
-                'skype': contacts.skype,
-                'photo': contacts.photo.url
-            }
-            })
+            person = About_me.objects.last()
+            person.name = self.request.POST['name']
+            person.surname = self.request.POST['surname']
+            person.bio = self.request.POST['bio']
+            person.birth_date = self.request.POST['birth_date']
+            person.contacts = self.request.POST['contacts']
+            person.skype = self.request.POST['skype']
+            person.email = self.request.POST['email']
+            person.jabber = self.request.POST['jabber']
+            person.photo = self.request.POST['photo']
+            person.save()
         else:
             return HttpResponseBadRequest()
+        return redirect('index')
+
+
+class PersonDataView(TemplateView):
+
+    def get(self, request, *args, **kwargs):
+        data = About_me.objects.get(pk=1)
+        return JsonResponse({'name': data.name,
+                             'surname': data.surname,
+                             'bio': data.bio,
+                             'contacts': data.contacts,
+                             'birth_date': str(data.birth_date),
+                             'email': data.email,
+                             'jabber': data.jabber,
+                             'skype': data.skype,
+                             'photo': data.photo.url
+                             })
+
+    def get_context_data(self, **kwargs):
+        context = super(PersonDataView, self).get_context_data(**kwargs)
+        person = About_me.objects.last()
+        person.name = self.request.GET['data[name]']
+        person.surname = self.request.GET['data[surname]']
+        person.bio = self.request.GET['data[bio]']
+        person.birth_date = self.request.GET['data[birth_date]']
+        person.contacts = self.request.GET['data[contacts]']
+        person.skype = self.request.GET['data[skype]']
+        person.email = self.request.GET['data[email]']
+        person.jabber = self.request.GET['data[jabber]']
+        person.photo = self.request.GET['data[photo]']
+        person.save()
+        return context
