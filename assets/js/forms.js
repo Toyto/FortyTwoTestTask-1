@@ -31,7 +31,13 @@ $(document).ready(function() {
 
     $("#id_photo").click(function() {
         var photo_url = $('#id_photo').val();
-        $('#photo').attr('src', photo_url);
+        var no_photo_url = "static/images/blank_photo.gif"
+        if (photo_url == "") {
+            $('#photo').attr('src', no_photo_url);
+        }
+        else {
+            $('#photo').attr('src', photo_url);
+        }
     });
 
     function block_form() {

@@ -51,19 +51,11 @@ class CreateAuthView(FormView):
 
     @method_decorator(login_required)
     def post(self, request, *args, **kwargs):
-        form = AuthorForm(request.POST, request.FILES)
+        person = About_me.objects.last()
+        form = AuthorForm(request.POST, request.FILES, instance=person)
         if form.is_valid():
-            person = About_me.objects.last()
-            person.name = self.request.POST['name']
-            person.surname = self.request.POST['surname']
-            person.bio = self.request.POST['bio']
-            person.birth_date = self.request.POST['birth_date']
-            person.contacts = self.request.POST['contacts']
-            person.skype = self.request.POST['skype']
-            person.email = self.request.POST['email']
-            person.jabber = self.request.POST['jabber']
-            person.photo = self.request.POST['photo']
-            person.save()
+            data = form.save(commit=False)
+            data.save()
         else:
             return HttpResponseBadRequest()
         return redirect('index')
