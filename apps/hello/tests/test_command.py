@@ -1,4 +1,5 @@
 import os
+import subprocess
 from django.test import TestCase
 from django.core.management import call_command
 
@@ -11,3 +12,5 @@ class CommandTests(TestCase):
         fout = os.popen('python manage.py models_info').read()
         self.assertIn('', fout)
         call_command('models_info')
+        os.system('chmod u+x models_inf.sh')
+        subprocess.call(['./models_inf.sh'])
