@@ -3,7 +3,6 @@ $(document).ready(function() {
     $.ajax({
         method: 'GET',
         url: _URLS.person_info,
-        data: $('#register_form').serialize(),
         dataType: 'json',
         success: function(json){
             var name = json['name'];
