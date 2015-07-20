@@ -2,14 +2,14 @@ from django.db import models
 
 
 class About_me(models.Model):
-    name = models.CharField(max_length=33, default='name')
-    surname = models.CharField(max_length=33, default='surname')
-    bio = models.CharField(max_length=500, default='bio')
-    contacts = models.CharField(max_length=150, default='contacts')
-    birth_date = models.DateField('birth date')
+    name = models.CharField(max_length=33)
+    surname = models.CharField(max_length=33)
+    bio = models.CharField(max_length=500)
+    contacts = models.CharField(max_length=150)
+    birth_date = models.DateField()
     email = models.EmailField()
-    jabber = models.CharField(max_length=50, default='id')
-    skype = models.CharField(max_length=33, default='skype')
+    jabber = models.CharField(max_length=50)
+    skype = models.CharField(max_length=33)
     photo = models.ImageField(upload_to='photos', blank=True)
 
     def __str__(self):
