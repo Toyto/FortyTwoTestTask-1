@@ -1,5 +1,5 @@
 from django.views.generic import TemplateView, FormView
-from django.http import HttpResponseBadRequest
+from django.http import HttpResponseBadRequest, HttpResponse
 from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
@@ -8,7 +8,7 @@ from django.shortcuts import redirect
 from .util import JsonResponse
 from apps.hello import signals  # NOQA
 from .models import About_me, AllRequests
-from .forms import AuthorForm
+from .forms import AuthorForm, RequestForm
 
 import logging
 logger = logging.getLogger(__name__)
@@ -25,8 +25,9 @@ class IndexView(TemplateView):
         return context
 
 
-class RequestView(TemplateView):
+class RequestView(FormView):
     template_name = 'requests.html'
+    form_class = RequestForm
 
     def get_context_data(self, **kwargs):
         context = super(RequestView, self).get_context_data(**kwargs)
@@ -34,8 +35,24 @@ class RequestView(TemplateView):
             path=reverse('requests')).order_by('-priority')[:10]
         context['new_requests'] = AllRequests.objects.exclude(
             path=reverse('requests'))
+        context['choices'] = range(1, 11)
         logger.debug(u'Requests page context %s', context)
         return context
+
+    def post(self, request, *args, **kwargs):
+        form = RequestForm(request.POST)
+        requests_list = request.POST.getlist('id')
+        priority_list = request.POST.getlist('priority')
+        if form.is_valid():
+            req = AllRequests.objects.filter(id__in=requests_list)
+            counter = 0
+            for obj in req:
+                if obj.priority != priority_list[counter]:
+                    obj.priority = priority_list[counter]
+                    counter += 1
+        else:
+            return HttpResponseBadRequest()
+        return HttpResponse('OK')
 
 
 class CreateAuthView(FormView):

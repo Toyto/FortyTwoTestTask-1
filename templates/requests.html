@@ -4,6 +4,11 @@
 {% block scripts %}
     {{ block.super }}
     <script type="text/javascript" src="{% static 'js/requests.js' %}"></script>
+    <script type="text/javascript">
+        window._URLS = {
+            req : "{% url 'requests' %}"
+        }
+    </script>
 {% endblock %}
 
 {% block content %}
@@ -14,7 +19,10 @@
             <h2>({{ new_requests.count }}) : requests</h2>
             <hr>
             {% for req in request_list %}
-                Priority: {{ req.priority }}
+                <form name="choices" method="POST">{% csrf_token %}
+                    Priority: {{ form.priority }}
+                    <input name="id" type="hidden" value="{{ req.id }}">
+                </form>
                 <div id="list">
                     "{{ req.request_method }}
                     {{ req.path }}
