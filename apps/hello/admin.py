@@ -7,7 +7,7 @@ class AdminAbout_me(admin.ModelAdmin):
 
 
 class RequestsAdmin(admin.ModelAdmin):
-    list_display = ('request_method', 'date_time', 'path',
+    list_display = ('request_method', 'date_time', 'priority', 'path',
                     'server_protocol', 'status_code', 'content_len')
 
 

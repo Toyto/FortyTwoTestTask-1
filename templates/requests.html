@@ -14,6 +14,7 @@
             <h2>({{ new_requests.count }}) : requests</h2>
             <hr>
             {% for req in request_list %}
+                Priority: {{ req.priority }}
                 <div id="list">
                     "{{ req.request_method }}
                     {{ req.path }}

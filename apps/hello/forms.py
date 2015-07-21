@@ -1,5 +1,5 @@
 from django import forms
-from .models import About_me
+from .models import About_me, AllRequests
 
 
 class AuthorForm(forms.ModelForm):
@@ -10,3 +10,9 @@ class AuthorForm(forms.ModelForm):
             'bio': forms.Textarea(),
             'contacts': forms.Textarea()
         }
+
+
+class RequestForm(forms.ModelForm):
+
+    class Meta:
+        model = AllRequests

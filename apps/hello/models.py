@@ -17,6 +17,8 @@ class About_me(models.Model):
 
 
 class AllRequests(models.Model):
+    choice = [(i, i) for i in range(1, 11)]
+
     date_time = models.DateTimeField(auto_now=True, auto_now_add=True,
                                      blank=True)
     request_method = models.CharField(max_length=10)
@@ -24,6 +26,7 @@ class AllRequests(models.Model):
     server_protocol = models.CharField(max_length=10)
     status_code = models.IntegerField(max_length=3)
     content_len = models.IntegerField(max_length=100)
+    priority = models.IntegerField(default=1, choices=choice, blank=True)
 
     class Meta:
         ordering = ['date_time']
