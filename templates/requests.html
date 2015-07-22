@@ -18,11 +18,11 @@
             <h2><a href="{% url 'index' %}">Home</a></h2>
             <h2>({{ new_requests.count }}) : requests</h2>
             <hr>
+            <form name="choices" method="POST">{% csrf_token %}
             {% for req in request_list %}
-                <form name="choices" method="POST">{% csrf_token %}
-                    Priority: {{ form.priority }}
-                    <input name="id" type="hidden" value="{{ req.id }}">
-                </form>
+                Priority: {{ req.priority }}
+                <div class="menu">Change priority: {{ form.priority }}</div>
+                <input name="id" type="hidden" value="{{ req.id }}">
                 <div id="list">
                     "{{ req.request_method }}
                     {{ req.path }}
@@ -34,6 +34,8 @@
                     <br>
                 </div>
             {% endfor %}
+                <button type="submit" id="btn-save">Save</button>
+            </form>
         </div>
     </div>
 {% endblock %}

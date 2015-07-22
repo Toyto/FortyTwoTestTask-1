@@ -1,5 +1,5 @@
 from django.views.generic import TemplateView, FormView
-from django.http import HttpResponseBadRequest, HttpResponse
+from django.http import HttpResponseBadRequest
 from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
@@ -41,18 +41,18 @@ class RequestView(FormView):
 
     def post(self, request, *args, **kwargs):
         form = RequestForm(request.POST)
-        requests_list = request.POST.getlist('id')
-        priority_list = request.POST.getlist('priority')
+        requests_list = list(map(int, request.POST.getlist('id')))
+        priority_list = list(map(int, request.POST.getlist('priority')))
         if form.is_valid():
             req = AllRequests.objects.filter(id__in=requests_list)
             counter = 0
             for obj in req:
-                if obj.priority != priority_list[counter]:
-                    obj.priority = priority_list[counter]
-                    counter += 1
+                obj.priority = priority_list[counter]
+                obj.save()
+                counter += 1
+            return redirect('requests')
         else:
             return HttpResponseBadRequest()
-        return HttpResponse('OK')
 
 
 class CreateAuthView(FormView):
