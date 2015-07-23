@@ -26,7 +26,7 @@
             <div class=".col-xs-6 .col-md-6">
                 <p><label class="one">Name:</label>{{ form.name }}</p>
                 <p><label class="one">Surname:</label>{{ form.surname }}</p>
-                <p><label class="one">Date of birth:</label>{{ form.birth_date }}</p>
+                <p id="birth_date"><label class="one">Date of birth:</label>{{ form.birth_date }}</p>
                 <p><label for="id_photo" class="one">Photo:</label>{{ form.photo }}</p>
                 <p>
                     <img class="picture" src="" style="margin-left: 27%;" id="photo">
@@ -36,7 +36,7 @@
                 <button type="submit" id="btn-save" class="btns">Save</button>
                 <a href="{% url 'index' %}"><button type="button" class="btns">Cancel</button></a>
                 <span style="display: none;" id="loading">Loading....</span>
-                <span style="display: none;" id="form_error">ERROR! Fill all fields and try again.</span>
+                <span style="display: none;" id="form_error">Error. Fill all fields and try again.</span>
                 <span style="display: none;" id="form_complete">Changes has been saved</span>
             </div>
         </div>

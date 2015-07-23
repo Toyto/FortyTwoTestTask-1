@@ -62,13 +62,21 @@ $(document).ready(function() {
                 $("#form_complete").hide();
             }, 5000);
         },
-        error: function() {
+        error:  function(resp) {
             unblock_form();
             $("#form_error").show();
+            // render errors in form fields
+            var errors = JSON.parse(resp.responseText);
+            for (error in errors) {
+                var id = '#id_' + error;
+                $(id).parent('p').append(errors[error]);
+                console.log(id)
+                console.log(errors[error])
+                console.log($(id).prepend(errors[error]))
+            }
             setTimeout(function() {
                 $("#form_error").hide();
             }, 5000);
-            alert('You make some errors, fix it and try again');
         }
     }
 

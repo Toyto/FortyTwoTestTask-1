@@ -8,6 +8,7 @@ from .util import JsonResponse
 from apps.hello import signals  # NOQA
 from .models import About_me, AllRequests
 from .forms import AuthorForm, RequestForm
+import json
 
 import logging
 logger = logging.getLogger(__name__)
@@ -70,7 +71,12 @@ class CreateAuthView(FormView):
             data = form.save(commit=False)
             data.save()
         else:
-            return HttpResponseBadRequest()
+            errors_dict = {}
+            if form.errors:
+                for error in form.errors:
+                    e = form.errors[error]
+                    errors_dict[error] = e
+            return HttpResponseBadRequest(json.dumps(errors_dict))
         return redirect('index')
 
 
