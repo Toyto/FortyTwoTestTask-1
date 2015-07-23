@@ -25,6 +25,6 @@ class MiddlewareTests(TestCase):
             self.client.get(reverse('index'))
             self.client.get(reverse('requests'))
         requests = AllRequests.objects.all()
-        self.assertEqual(requests.count(), 20)
+        self.assertEqual(requests.count(), 10)
         response = self.client.get(reverse('requests'))
         self.assertEqual(response.context['request_list'].count(), 10)

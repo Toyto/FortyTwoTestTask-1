@@ -1,6 +1,5 @@
 from django.views.generic import TemplateView, FormView
 from django.http import HttpResponseBadRequest
-from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.shortcuts import redirect
@@ -31,10 +30,9 @@ class RequestView(FormView):
 
     def get_context_data(self, **kwargs):
         context = super(RequestView, self).get_context_data(**kwargs)
-        context['request_list'] = AllRequests.objects.exclude(
-            path=reverse('requests')).order_by('-priority')[:10]
-        context['new_requests'] = AllRequests.objects.exclude(
-            path=reverse('requests'))
+        context['request_list'] = AllRequests.objects.all().order_by(
+            '-priority')[:10]
+        context['new_requests'] = AllRequests.objects.all()
         context['choices'] = range(1, 11)
         logger.debug(u'Requests page context %s', context)
         return context
@@ -45,11 +43,9 @@ class RequestView(FormView):
         priority_list = list(map(int, request.POST.getlist('priority')))
         if form.is_valid():
             req = AllRequests.objects.filter(id__in=requests_list)
-            counter = 0
-            for obj in req:
-                obj.priority = priority_list[counter]
+            for i, obj in enumerate(req):
+                obj.priority = priority_list[i]
                 obj.save()
-                counter += 1
             return redirect('requests')
         else:
             return HttpResponseBadRequest()
