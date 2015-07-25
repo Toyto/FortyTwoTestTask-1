@@ -18,7 +18,7 @@ class FormTest(TestCase):
                      'birth_date': '1995-05-05',
                      'bio': 'bio', 'contacts': '1999119',
                      'email': 'asd@adsd.com',
-                     'jabber': 'jid', 'skype': 'mysk'
+                     'jabber': 'jid@ads.com', 'skype': 'mysk'
                      }
         form = AuthorForm(data=form_data)
         self.assertEqual(form.is_valid(), True)

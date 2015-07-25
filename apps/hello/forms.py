@@ -27,25 +27,15 @@ class AuthorForm(forms.ModelForm):
         email = self.cleaned_data['email']
         try:
             validate_email(email)
-            is_valid = True
         except ValidationError:
-            is_valid = False
-        if is_valid or email != '':
-            pass
-        else:
-            raise ValidationError("- Email uncorrect.")
+            raise ValidationError('Email uncorrect')
         return email
 
     def clean_jabber(self):
         jabber = self.cleaned_data['jabber']
         try:
             validate_email(jabber)
-            is_valid = True
         except ValidationError:
-            is_valid = False
-        if is_valid or jabber != '':
-            pass
-        else:
             raise ValidationError("- Jabber uncorrect.")
         return jabber
 

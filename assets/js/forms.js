@@ -60,22 +60,22 @@ $(document).ready(function() {
             $("#form_complete").show();
             setTimeout(function() {
                 $("#form_complete").hide();
+                location.reload();
             }, 5000);
         },
         error:  function(resp) {
             unblock_form();
             $("#form_error").show();
-            // render errors in form fields
             var errors = JSON.parse(resp.responseText);
             for (error in errors) {
                 var id = '#id_' + error;
                 $(id).parent('p').append(errors[error]);
-                console.log(id)
+                console.log($(id).parent('p').html())
                 console.log(errors[error])
-                console.log($(id).prepend(errors[error]))
             }
             setTimeout(function() {
                 $("#form_error").hide();
+                location.reload();
             }, 5000);
         }
     }
@@ -94,6 +94,10 @@ $(document).ready(function() {
     $(function () {
         $("#id_photo").change(readURL);
         $(".picture").show();
+    });
+
+    $(function() {
+        $( "[name~='birth_date']" ).datepicker({ dateFormat: 'yy-mm-dd' });
     });
 
 });
